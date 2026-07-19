@@ -1,0 +1,4729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForU伴学｜陪孩子走好英语启蒙每一步</title>
+  <meta
+    name="description"
+    content="ForU伴学英语启蒙品牌官网，提供两年英语启蒙路径、课程体系、妈妈心力成长、启蒙陪跑内容库与真实成长故事。"
+  />
+  <style>
+    :root {
+      --cream: #fffbf0;
+      --cream-deep: #f3efd9;
+      --green: #5bad72;
+      --green-light: #a8d86e;
+      --yellow: #ffd166;
+      --orange: #ffb84d;
+      --orange-deep: #e99a18;
+      --sky: #8ccfec;
+      --sky-soft: #e4f7fd;
+      --mint: #e8f5d8;
+      --ink: #273043;
+      --muted: #6c7485;
+      --card: rgba(255, 255, 255, 0.86);
+      --line: rgba(39, 48, 67, 0.1);
+      --shadow: 0 24px 70px rgba(91, 173, 114, 0.16);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(168, 216, 110, 0.48), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(134, 201, 232, 0.36), transparent 30%),
+        linear-gradient(180deg, #fffbf0 0%, #fffdf8 48%, #f1fae8 100%);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .rainbow-strip {
+      height: 4px;
+      background: linear-gradient(90deg, #2f90d8 0%, #ffd44c 24%, #ff8c5a 50%, #5bad72 74%, #8a43a7 100%);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 251, 240, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      width: 188px;
+      max-width: 42vw;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: #4d5668;
+      font-size: 0.96rem;
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .btn {
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      box-shadow: 0 16px 34px rgba(91, 173, 114, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 20px 42px rgba(91, 173, 114, 0.34);
+    }
+
+    .btn-soft {
+      color: #3f8f59;
+      background: #eff9dd;
+      border: 1px solid rgba(91, 173, 114, 0.2);
+    }
+
+    .btn-sky {
+      color: #1f6584;
+      background: #e2f6fd;
+      border: 1px solid rgba(74, 165, 203, 0.22);
+    }
+
+    .hero {
+      position: relative;
+      padding: 86px 0 66px;
+    }
+
+    .section {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 76px 0;
+    }
+
+    .hero-grid {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.78fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      margin: 0 0 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: #3f8f59;
+      background: rgba(239, 249, 221, 0.92);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .hero-brand {
+      width: 320px;
+      max-width: min(68vw, 320px);
+      margin-bottom: 18px;
+    }
+
+    .hero-brand img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2.7rem, 7vw, 5.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-lead {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: #505a6e;
+      font-size: clamp(1.08rem, 2vw, 1.3rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+
+    .trust-pill {
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.58);
+      box-shadow: 0 12px 32px rgba(77, 86, 104, 0.08);
+    }
+
+    .trust-pill strong {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .trust-pill span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: auto;
+      display: flex;
+      padding: 22px;
+      border-radius: 34px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(235, 249, 210, 0.58)),
+        url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f0a35e' fill-opacity='.12'%3E%3Ccircle cx='18' cy='18' r='4'/%3E%3Ccircle cx='82' cy='38' r='3'/%3E%3Ccircle cx='42' cy='92' r='3.5'/%3E%3C/g%3E%3C/svg%3E");
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.74);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card-kicker {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #3f8f59;
+      background: #eff9dd;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 10px;
+      font-size: clamp(1.42rem, 2.7vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-card-desc {
+      margin-bottom: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-path-list {
+      display: grid;
+      gap: 9px;
+      margin: 0 0 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-path-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 11px 12px;
+      border-radius: 18px;
+      color: #465064;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 10px 24px rgba(77, 86, 104, 0.07);
+      font-size: 0.96rem;
+      line-height: 1.58;
+    }
+
+    .hero-path-list strong {
+      color: var(--ink);
+    }
+
+    .hero-path-dot {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--green);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .hero-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4.6vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .path-card,
+    .soft-panel,
+    .map-panel {
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(244, 249, 223, 0.74));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .path-card {
+      padding: 26px;
+    }
+
+    .roadmap-frame {
+      position: relative;
+      overflow-x: auto;
+      border: 2px solid #1f1f1f;
+      border-radius: 0;
+      background: #fff;
+      box-shadow: 0 16px 40px rgba(77, 86, 104, 0.1);
+    }
+
+    .roadmap-table {
+      width: 100%;
+      min-width: 1120px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      color: #111;
+      background: #fff;
+      font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+    }
+
+    .roadmap-watermark {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.3;
+      background-image:
+        url("public/logo.png"),
+        url("public/logo.png"),
+        url("public/logo.png"),
+        url("public/logo.png"),
+        url("public/logo.png"),
+        url("public/logo.png");
+      background-repeat: no-repeat;
+      background-size: 104px auto;
+      background-position: 26% 15%, 74% 15%, 26% 47%, 74% 47%, 26% 79%, 74% 79%;
+      filter: saturate(1.25) contrast(1.18);
+      mix-blend-mode: multiply;
+    }
+
+    .roadmap-table th,
+    .roadmap-table td {
+      border: 2px solid #1f1f1f;
+      padding: 15px 10px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1.55;
+      font-weight: 800;
+    }
+
+    .roadmap-title th {
+      background: #ffd426;
+      font-size: 1.2rem;
+      padding: 16px;
+    }
+
+    .roadmap-duration th {
+      background: #ffd426;
+      font-size: 1.05rem;
+    }
+
+    .roadmap-row-label {
+      width: 110px;
+      background: #ffe6cf;
+      font-size: 1.05rem;
+    }
+
+    .roadmap-col-narrow {
+      width: 102px;
+    }
+
+    .roadmap-col-mid {
+      width: 156px;
+    }
+
+    .roadmap-col-wide {
+      width: 232px;
+    }
+
+    .roadmap-col-last {
+      width: 106px;
+    }
+
+    .roadmap-goal td {
+      background: #ffe6cf;
+    }
+
+    .roadmap-table small {
+      display: block;
+      margin-top: 4px;
+      color: #333;
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .path-note {
+      margin-top: 22px;
+      padding: 18px;
+      border-radius: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: #f4f9df;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .course-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-card,
+    .blog-card,
+    .team-card,
+    .planet-card {
+      position: relative;
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      box-shadow: 0 16px 42px rgba(77, 86, 104, 0.09);
+      overflow: hidden;
+    }
+
+    .course-card {
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+    }
+
+    .course-card:nth-child(1) {
+      border-color: rgba(47, 144, 216, 0.18);
+      background: linear-gradient(180deg, #e9f7ff 0%, #ffffff 92%);
+    }
+
+    .course-card:nth-child(2) {
+      border-color: rgba(47, 144, 216, 0.28);
+      background: linear-gradient(180deg, #bfe8fb 0%, #f2fbff 100%);
+      box-shadow: 0 20px 48px rgba(47, 144, 216, 0.14);
+    }
+
+    .course-card:nth-child(3) {
+      border-color: rgba(255, 209, 102, 0.24);
+      background: linear-gradient(180deg, #fff8d6 0%, #ffffff 92%);
+    }
+
+    .course-card:nth-child(4) {
+      border-color: rgba(255, 184, 77, 0.36);
+      background: linear-gradient(180deg, #ffe08a 0%, #fff7df 100%);
+      box-shadow: 0 20px 48px rgba(255, 184, 77, 0.16);
+    }
+
+    .course-card:nth-child(5) {
+      border-color: rgba(224, 86, 72, 0.28);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 214, 189, 0.5), transparent 30%),
+        linear-gradient(135deg, #ffe2dc 0%, #fff7f1 100%);
+    }
+
+    .course-card:nth-child(6) {
+      background: linear-gradient(180deg, rgba(235, 247, 253, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .course-card:nth-child(1) .course-icon,
+    .course-card:nth-child(2) .course-icon {
+      color: #1f6f9d;
+      background: #dff4fb;
+    }
+
+    .course-card:nth-child(1) .course-badge,
+    .course-card:nth-child(2) .course-badge {
+      color: #1f6f9d;
+      background: #dff4fb;
+    }
+
+    .course-card:nth-child(3) .course-icon,
+    .course-card:nth-child(4) .course-icon {
+      color: #9a620c;
+      background: #fff0bd;
+    }
+
+    .course-card:nth-child(3) .course-badge,
+    .course-card:nth-child(4) .course-badge {
+      color: #9a620c;
+      background: #fff0bd;
+    }
+
+    .course-card-wide {
+      grid-column: span 2;
+      min-height: 300px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(260px, 1.08fr);
+      gap: 28px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 180, 160, 0.48), transparent 32%),
+        linear-gradient(135deg, #ffd9d1 0%, #fff6ee 100%);
+    }
+
+    .course-card-wide .course-icon,
+    .course-card-wide .course-badge {
+      color: #9f352d;
+      background: #ffd0c8;
+    }
+
+    .course-card-wide .course-price {
+      color: #d64b3f;
+    }
+
+    .course-card-practice {
+      grid-column: span 2;
+      min-height: 260px;
+      border: 1px solid rgba(240, 163, 94, 0.28);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255, 247, 168, 0.42), transparent 32%),
+        radial-gradient(circle at 12% 86%, rgba(240, 163, 94, 0.18), transparent 30%),
+        linear-gradient(135deg, rgba(255, 250, 235, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .course-card-practice .course-badge {
+      color: #925a18;
+      background: #fff0bd;
+    }
+
+    .course-disclaimer {
+      margin: 20px 0 0;
+      padding: 16px 18px;
+      border: 1px solid rgba(192, 96, 24, 0.18);
+      border-radius: 20px;
+      color: #7a4a20;
+      background: #fff6e4;
+      font-weight: 800;
+      line-height: 1.7;
+    }
+
+    .course-practice-points {
+      display: grid;
+      gap: 10px;
+      margin: 12px 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .course-practice-points li {
+      padding: 12px 14px;
+      border-radius: 16px;
+      color: #66513a;
+      background: rgba(255, 255, 255, 0.72);
+      font-weight: 700;
+    }
+
+    .course-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: #eff9dd;
+      font-size: 1.9rem;
+    }
+
+    .course-card h3,
+    .blog-card h3,
+    .team-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.28rem;
+      line-height: 1.35;
+    }
+
+    .course-card p,
+    .blog-card p,
+    .team-card p,
+    .planet-card p {
+      color: var(--muted);
+    }
+
+    .course-card .btn {
+      margin-top: auto;
+    }
+
+    .course-card-wide .btn {
+      margin-top: 0;
+    }
+
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .course-meta span,
+    .course-badge {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #3f5e4b;
+      background: rgba(232, 245, 216, 0.92);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .course-badge {
+      margin-bottom: 12px;
+      color: #8a6128;
+      background: #fff4cf;
+    }
+
+    .course-price {
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .course-price small {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .course-note {
+      margin: 0 0 18px;
+      color: #6b7a65;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .course-stage-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .course-stage-list li {
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: #465064;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 10px 24px rgba(77, 86, 104, 0.07);
+    }
+
+    .course-stage-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .mom-section {
+      position: relative;
+    }
+
+    .mom-panel {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      padding: 36px;
+      background:
+        radial-gradient(circle at 85% 18%, rgba(134, 201, 232, 0.26), transparent 34%),
+        radial-gradient(circle at 12% 80%, rgba(168, 216, 110, 0.28), transparent 36%),
+        linear-gradient(135deg, rgba(239, 249, 221, 0.94), rgba(255, 255, 255, 0.78));
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0 22px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #3f5e4b;
+      background: var(--mint);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .mom-visual {
+      padding: 28px;
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: 0 16px 36px rgba(39, 48, 67, 0.08);
+    }
+
+    .mom-directory-card {
+      width: 100%;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .mom-directory-card:hover,
+    .mom-directory-card:focus-visible {
+      outline: none;
+      transform: translateY(-5px);
+      box-shadow: 0 24px 54px rgba(77, 86, 104, 0.14);
+    }
+
+    .mom-directory-hint {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #1f6f9d;
+      background: #e2f6fd;
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .mom-quote {
+      margin: 0;
+      font-size: 1.28rem;
+      font-weight: 900;
+      line-height: 1.55;
+    }
+
+    .mom-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .mom-list li {
+      margin-top: 10px;
+    }
+
+    .blog-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .content-hub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: -4px 0 28px;
+    }
+
+    .content-hub-card {
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      cursor: pointer;
+      min-height: 250px;
+      padding: 24px;
+      border-radius: 28px;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 16px 42px rgba(77, 86, 104, 0.09);
+      font: inherit;
+      text-align: left;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .content-hub-card:hover,
+    .content-hub-card.active {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 54px rgba(77, 86, 104, 0.14);
+    }
+
+    .content-hub-method {
+      background:
+        radial-gradient(circle at 88% 18%, rgba(168, 216, 110, 0.28), transparent 34%),
+        linear-gradient(180deg, #f4fbdf 0%, #ffffff 100%);
+    }
+
+    .content-hub-video {
+      background:
+        radial-gradient(circle at 85% 18%, rgba(140, 207, 236, 0.34), transparent 34%),
+        linear-gradient(180deg, #e8f8ff 0%, #ffffff 100%);
+    }
+
+    .content-hub-radio {
+      background:
+        radial-gradient(circle at 84% 18%, rgba(255, 184, 77, 0.3), transparent 34%),
+        linear-gradient(180deg, #fff4d6 0%, #ffffff 100%);
+    }
+
+    .content-hub-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.78);
+      font-size: 1.9rem;
+      box-shadow: 0 10px 24px rgba(77, 86, 104, 0.08);
+    }
+
+    .content-hub-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.34rem;
+      line-height: 1.3;
+    }
+
+    .content-hub-card p {
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .content-topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .content-topic-list li {
+      padding: 6px 9px;
+      border-radius: 999px;
+      color: #536070;
+      background: rgba(255, 255, 255, 0.78);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .blog-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -10px 0 24px;
+      justify-content: center;
+    }
+
+    .blog-filter {
+      border: 1px solid rgba(91, 173, 114, 0.2);
+      cursor: pointer;
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: #486052;
+      background: rgba(255, 255, 255, 0.78);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 900;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .blog-filter:hover,
+    .blog-filter.active {
+      color: #fff;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      transform: translateY(-2px);
+    }
+
+    .blog-card {
+      border: 0;
+      cursor: pointer;
+      padding: 0;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 54px rgba(77, 86, 104, 0.14);
+    }
+
+    .blog-cover {
+      height: 172px;
+      overflow: hidden;
+      background: #f2f6e8;
+    }
+
+    .blog-cover img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .blog-body {
+      padding: 20px;
+    }
+
+    .blog-type {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #3f8f59;
+      background: #eff9dd;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .blog-card-video .blog-type {
+      color: #1f6f9d;
+      background: #dff4fb;
+    }
+
+    .blog-card-podcast .blog-type {
+      color: #9f352d;
+      background: #ffd8d1;
+    }
+
+    .blog-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      color: #7a8290;
+      font-size: 0.84rem;
+      font-weight: 900;
+    }
+
+    .blog-meta span {
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: #f4f6f0;
+    }
+
+    .blog-modal-card {
+      width: min(860px, 100%);
+      background: #fffdf8;
+    }
+
+    .blog-modal-cover {
+      margin: 18px 0;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #f2f6e8;
+    }
+
+    .blog-modal-cover img {
+      width: 100%;
+      max-height: 430px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .blog-modal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 14px;
+    }
+
+    .blog-modal-meta span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #4f5a67;
+      background: #f3f6ed;
+      font-size: 0.86rem;
+      font-weight: 900;
+    }
+
+    .blog-modal-content {
+      display: grid;
+      gap: 14px;
+      color: #485268;
+      line-height: 1.85;
+    }
+
+    .blog-media-box {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      border-radius: 22px;
+      color: #5b6472;
+      background: #f8faf2;
+      font-weight: 800;
+    }
+
+    .blog-media-box video,
+    .blog-media-box audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .mom-directory-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mom-directory-item {
+      padding: 16px;
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .mom-directory-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .mom-directory-item span {
+      display: inline-flex;
+      margin: 0 8px 8px 0;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #7a4a20;
+      background: #fff0bd;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .mom-directory-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .map-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      padding: 28px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255, 211, 102, 0.22), transparent 28%),
+        radial-gradient(circle at 86% 72%, rgba(91, 173, 114, 0.18), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(250, 246, 229, 0.82));
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 520px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.78), transparent 24%),
+        radial-gradient(circle at 78% 72%, rgba(255, 245, 194, 0.58), transparent 30%),
+        linear-gradient(135deg, #eaf8ff 0%, #fff5dc 54%, #eef8e8 100%);
+      overflow: hidden;
+    }
+
+    .map-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(91, 173, 114, 0.16);
+      border-radius: 24px;
+      pointer-events: none;
+    }
+
+    .map-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .map-land {
+      fill: rgba(255, 255, 255, 0.72);
+      stroke: rgba(91, 173, 114, 0.24);
+      stroke-width: 2.5;
+      filter: drop-shadow(0 16px 24px rgba(74, 110, 124, 0.1));
+    }
+
+    .map-line {
+      fill: none;
+      stroke: rgba(47, 144, 216, 0.2);
+      stroke-width: 1.8;
+      stroke-dasharray: 6 12;
+    }
+
+    .city-dot {
+      position: absolute;
+      border: 0;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff7a8;
+      box-shadow: 0 0 0 7px rgba(255, 211, 85, 0.16), 0 0 24px rgba(255, 196, 46, 0.72);
+      transform: translate(-50%, -50%);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    .city-dot:hover,
+    .city-dot:focus-visible {
+      outline: none;
+      background: #ffffff;
+      box-shadow: 0 0 0 9px rgba(255, 211, 85, 0.24), 0 0 34px rgba(255, 196, 46, 0.9);
+    }
+
+    .city-dot::after {
+      content: attr(data-city);
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: #4d5668;
+      background: rgba(255, 255, 255, 0.86);
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .city-dot.label-left::after {
+      left: auto;
+      right: 20px;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        box-shadow: 0 0 0 7px rgba(255, 211, 85, 0.16), 0 0 24px rgba(255, 196, 46, 0.72);
+      }
+      50% {
+        box-shadow: 0 0 0 16px rgba(255, 211, 85, 0.05), 0 0 32px rgba(255, 196, 46, 0.88);
+      }
+    }
+
+    .planet-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      align-content: start;
+    }
+
+    .planet-card {
+      border: 0;
+      cursor: pointer;
+      padding: 18px;
+      text-align: left;
+      font: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .planet-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 44px rgba(91, 173, 114, 0.14);
+    }
+
+    .planet-card:nth-child(1),
+    .planet-card:nth-child(3) {
+      background: linear-gradient(180deg, rgba(241, 250, 232, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .planet-empty {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px dashed rgba(91, 173, 114, 0.28);
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .team-photo {
+      height: 240px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(168, 216, 110, 0.82), rgba(134, 201, 232, 0.78)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cpath d='M42 133c12-37 30-55 55-55s43 18 55 55' fill='none' stroke='white' stroke-width='10' stroke-linecap='round' opacity='.45'/%3E%3Ccircle cx='94' cy='61' r='28' fill='none' stroke='white' stroke-width='10' opacity='.45'/%3E%3C/svg%3E");
+      background-size: cover;
+      font-size: 4.2rem;
+      font-weight: 900;
+    }
+
+    .team-photo span {
+      position: relative;
+      z-index: 1;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.1;
+      text-align: center;
+      text-shadow: 0 4px 18px rgba(39, 48, 67, 0.18);
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .team-card:nth-child(2),
+    .team-card:nth-child(4) {
+      background: linear-gradient(180deg, rgba(241, 250, 232, 0.98), rgba(255, 255, 255, 0.92));
+    }
+
+    .team-body {
+      padding: 22px;
+    }
+
+    .team-role {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 0 0 46px;
+      color: #596274;
+      background: linear-gradient(180deg, rgba(240, 248, 225, 0.86), rgba(255, 255, 255, 0.7));
+      border-top: 1px solid rgba(39, 48, 67, 0.08);
+    }
+
+    .footer-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-meta {
+      max-width: 320px;
+    }
+
+    .footer-logo {
+      width: 150px;
+      max-width: 46vw;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      margin-left: auto;
+    }
+
+    .footer-links-label {
+      color: #54705e;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-link-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .footer-mini-link {
+      border: 0;
+      cursor: pointer;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: #5bad72;
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .footer-mini-link:nth-child(1) {
+      background: #ff5f7e;
+    }
+
+    .footer-mini-link:nth-child(2) {
+      background: #273043;
+    }
+
+    .footer-mini-link:nth-child(3) {
+      background: #2f90d8;
+    }
+
+    .footer-mini-link:nth-child(4) {
+      background: #5bad72;
+    }
+
+    .footer-mini-link:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(39, 48, 67, 0.48);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-card {
+      position: relative;
+      width: min(480px, 100%);
+      max-height: min(720px, calc(100vh - 40px));
+      overflow: auto;
+      padding: 30px;
+      border-radius: 30px;
+      background: #fffaf2;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #596274;
+      background: #fff;
+      font-size: 1.5rem;
+    }
+
+    .qr-box {
+      width: min(330px, 100%);
+      min-height: 220px;
+      margin: 22px auto 18px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      border: 1px solid rgba(91, 173, 114, 0.18);
+      border-radius: 24px;
+      color: #3f8f59;
+      background: #fff;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .qr-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      object-fit: contain;
+    }
+
+    .student-image {
+      height: 180px;
+      margin: 18px 0;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      color: #456273;
+      background: linear-gradient(135deg, #eff9dd, #dff4fb);
+      font-size: 3rem;
+    }
+
+    .student-link {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .phonics-lab-section {
+      padding-top: 36px;
+    }
+
+    .phonics-lab {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .phonics-levels,
+    .phonics-map-panel {
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+    }
+
+    .phonics-levels {
+      padding: 22px;
+    }
+
+    .phonics-level-button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      padding: 13px 12px;
+      border-radius: 16px;
+      color: #5d6472;
+      background: transparent;
+      font: inherit;
+      text-align: left;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .phonics-level-button:hover,
+    .phonics-level-button.active {
+      color: #119b69;
+      background: #effaf2;
+      transform: translateX(2px);
+    }
+
+    .phonics-level-button strong {
+      display: block;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .phonics-level-button.active strong {
+      color: #10a872;
+    }
+
+    .phonics-level-button span {
+      display: block;
+      margin-top: 3px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .phonics-map-panel {
+      padding: clamp(20px, 4vw, 34px);
+      background:
+        radial-gradient(circle at 50% 22%, rgba(41, 190, 132, 0.16), transparent 30%),
+        linear-gradient(180deg, #fffdf8 0%, #f8fbf7 100%);
+    }
+
+    .phonics-level-hero {
+      padding: 18px 20px;
+      border: 2px solid #19bd80;
+      border-bottom-width: 6px;
+      border-radius: 18px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    .phonics-level-hero strong {
+      display: block;
+      color: #0cab73;
+      font-size: 1.05rem;
+    }
+
+    .phonics-level-hero span {
+      display: block;
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 1.18rem;
+    }
+
+    .phonics-map {
+      position: relative;
+      min-height: 360px;
+      margin: 18px 0;
+      overflow: hidden;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 24% 72%, rgba(25, 189, 128, 0.12), transparent 25%),
+        radial-gradient(circle at 75% 30%, rgba(255, 209, 102, 0.14), transparent 26%);
+    }
+
+    .phonics-map::before {
+      content: "";
+      position: absolute;
+      inset: 42px 68px;
+      border-top: 3px dashed rgba(39, 48, 67, 0.08);
+      border-right: 3px dashed rgba(39, 48, 67, 0.08);
+      border-radius: 50%;
+      transform: rotate(-14deg);
+    }
+
+    .phonics-node {
+      position: absolute;
+      border: 0;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, #2ad28f, #0fa66d);
+      box-shadow: 0 14px 28px rgba(17, 166, 109, 0.22);
+      font: inherit;
+      font-weight: 900;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .phonics-node:hover,
+    .phonics-node.active {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 38px rgba(17, 166, 109, 0.28);
+    }
+
+    .phonics-node[disabled] {
+      cursor: not-allowed;
+      opacity: 0.34;
+      filter: grayscale(0.5);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .phonics-node-main {
+      left: 50%;
+      top: 28px;
+      width: 132px;
+      height: 76px;
+      transform: translateX(-50%);
+      border: 6px solid rgba(255, 255, 255, 0.72);
+      font-size: 0.98rem;
+    }
+
+    .phonics-node-main:hover,
+    .phonics-node-main.active {
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    .phonics-node-small {
+      width: 132px;
+      height: 58px;
+      padding: 0 12px;
+      font-size: 0.92rem;
+    }
+
+    .phonics-node-gpc {
+      left: 18%;
+      top: 180px;
+    }
+
+    .phonics-node-word {
+      left: 42%;
+      top: 240px;
+      width: 148px;
+    }
+
+    .phonics-node-sentence {
+      right: 12%;
+      top: 146px;
+      width: 156px;
+    }
+
+    .phonics-node-label {
+      position: absolute;
+      left: calc(50% + 78px);
+      top: 52px;
+      color: #303747;
+      font-weight: 900;
+    }
+
+    .phonics-start-card {
+      padding: 22px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 16px 44px rgba(39, 48, 67, 0.1);
+      text-align: center;
+    }
+
+    .phonics-start-card p {
+      margin-bottom: 16px;
+      color: #596274;
+      font-weight: 800;
+    }
+
+    .phonics-start-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .phonics-flow {
+      position: relative;
+      min-height: 720px;
+      margin: 20px 0 18px;
+      overflow: hidden;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 70% 12%, rgba(34, 197, 138, 0.11), transparent 24%),
+        radial-gradient(circle at 22% 86%, rgba(255, 210, 92, 0.11), transparent 24%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(250, 253, 248, 0.92));
+    }
+
+    .phonics-flow-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .phonics-flow-step {
+      position: absolute;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: min(330px, 66%);
+      padding: 0;
+      color: #273043;
+      background: transparent;
+      font: inherit;
+      text-align: left;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .phonics-flow-step:hover,
+    .phonics-flow-step.active {
+      transform: translateY(-4px);
+      filter: saturate(1.08);
+    }
+
+    .phonics-flow-step.active {
+      z-index: 2;
+    }
+
+    .phonics-flow-step-1 {
+      left: 38%;
+      top: 18px;
+      width: min(420px, 62%);
+    }
+
+    .phonics-flow-step-2 {
+      left: 18%;
+      top: 96px;
+    }
+
+    .phonics-flow-step-3 {
+      left: 46%;
+      top: 174px;
+    }
+
+    .phonics-flow-step-4 {
+      left: 28%;
+      top: 252px;
+      width: min(420px, 70%);
+    }
+
+    .phonics-flow-step-5 {
+      left: 50%;
+      top: 330px;
+    }
+
+    .phonics-flow-step-6 {
+      left: 24%;
+      top: 408px;
+    }
+
+    .phonics-flow-step-7 {
+      left: 42%;
+      top: 486px;
+      width: min(420px, 66%);
+    }
+
+    .phonics-flow-step-8 {
+      left: 18%;
+      top: 564px;
+    }
+
+    .phonics-flow-step-9 {
+      left: 43%;
+      top: 642px;
+    }
+
+    .phonics-flow-index {
+      position: relative;
+      flex: 0 0 82px;
+      width: 82px;
+      height: 50px;
+      display: block;
+      border-radius: 50%;
+      color: transparent;
+      background: linear-gradient(180deg, #2ad28f 0%, #16bd78 68%, #0da566 100%);
+      box-shadow:
+        inset 0 -12px 0 rgba(0, 0, 0, 0.12),
+        0 14px 28px rgba(17, 166, 109, 0.18);
+    }
+
+    .phonics-flow-index::after {
+      content: attr(data-index);
+      position: absolute;
+      left: 50%;
+      top: 47%;
+      transform: translate(-50%, -50%);
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .phonics-flow-step.active .phonics-flow-index {
+      box-shadow:
+        inset 0 -12px 0 rgba(0, 0, 0, 0.12),
+        0 0 0 9px rgba(33, 191, 134, 0.13),
+        0 18px 34px rgba(17, 166, 109, 0.24);
+    }
+
+    .phonics-flow-step.completed .phonics-flow-index {
+      background: linear-gradient(180deg, #8eeac8 0%, #28c88b 100%);
+    }
+
+    .phonics-flow-step.completed .phonics-flow-index::after {
+      content: "✓";
+      font-size: 1.05rem;
+    }
+
+    .phonics-flow-step.future {
+      opacity: 0.46;
+      filter: grayscale(0.9);
+    }
+
+    .phonics-flow-step.future .phonics-flow-index {
+      background: linear-gradient(180deg, #d7dce2 0%, #b7c0ca 100%);
+      box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .phonics-flow-step.future small,
+    .phonics-flow-step.future strong {
+      color: #8b95a3;
+    }
+
+    .phonics-flow-step.future .phonics-flow-text {
+      opacity: 0.9;
+    }
+
+    .phonics-flow-step small {
+      display: block;
+      margin-bottom: 4px;
+      color: #0c9465;
+      font-weight: 900;
+    }
+
+    .phonics-flow-step strong {
+      display: block;
+      color: #111827;
+      font-size: 1.12rem;
+      font-weight: 900;
+    }
+
+    .phonics-flow-copy {
+      display: none;
+      margin-top: 6px;
+      color: #687181;
+      font-size: 0.92rem;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .phonics-flow-core {
+      margin: 12px 0 0;
+      color: #596274;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .phonics-flow-step.active .phonics-flow-copy {
+      display: block;
+      color: #364153;
+    }
+
+    .phonics-flow-step.active .phonics-flow-text {
+      padding: 14px 20px;
+      border: 2px solid #21bf86;
+      border-bottom-width: 6px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 42px rgba(77, 86, 104, 0.09);
+    }
+
+    .phonics-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: none;
+      color: #111827;
+      background: #fffdf9;
+    }
+
+    .phonics-modal.active {
+      display: block;
+    }
+
+    .phonics-practice-screen {
+      position: relative;
+      min-height: 100vh;
+      padding: 18px clamp(18px, 4vw, 44px) 30px;
+      background:
+        radial-gradient(circle at 18% 78%, rgba(25, 189, 128, 0.1), transparent 20%),
+        linear-gradient(180deg, #fffdf9 0%, #fbfaf7 100%);
+    }
+
+    .phonics-practice-top {
+      display: grid;
+      grid-template-columns: 48px 1fr 48px;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .phonics-icon-button {
+      border: 0;
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #6d7480;
+      background: transparent;
+      font: inherit;
+      font-size: 1.5rem;
+    }
+
+    .phonics-progress {
+      height: 3px;
+      border-radius: 999px;
+      background: #ecebea;
+      overflow: hidden;
+    }
+
+    .phonics-progress span {
+      display: block;
+      width: 20%;
+      height: 100%;
+      background: #21bf86;
+      transition: width 0.25s ease;
+    }
+
+    .phonics-card-stage {
+      display: grid;
+      place-items: center;
+      min-height: calc(100vh - 190px);
+      text-align: center;
+    }
+
+    .phonics-stage-shell {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .phonics-activity-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      color: #0c9465;
+      background: #effaf2;
+      font-size: 0.86rem;
+      font-weight: 900;
+    }
+
+    .phonics-stage-desc {
+      max-width: 620px;
+      margin: 0 auto 18px;
+      color: #5f6875;
+      font-weight: 800;
+      line-height: 1.75;
+    }
+
+    .phonics-core-layout {
+      display: block;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .phonics-core-main {
+      padding: 2px 0 0;
+      text-align: center;
+    }
+
+    .phonics-image-card {
+      width: min(260px, 56vw);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 26px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #dff4fb, #fff0bd);
+      box-shadow: 0 18px 48px rgba(77, 86, 104, 0.12);
+    }
+
+    .phonics-image-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .phonics-image-card span {
+      font-size: clamp(3.6rem, 12vw, 6.2rem);
+    }
+
+    .phonics-letter {
+      margin: 24px 0 8px;
+      color: #111827;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(5rem, 13vw, 8.8rem);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .phonics-letter.word,
+    .phonics-letter.sentence {
+      font-size: clamp(3.4rem, 9vw, 6.4rem);
+    }
+
+    .phonics-grapheme-grid,
+    .phonics-option-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 18px auto 28px;
+    }
+
+    .phonics-sound-card,
+    .phonics-option-card,
+    .phonics-drop-slot {
+      border: 1px solid rgba(39, 48, 67, 0.08);
+      min-width: 86px;
+      min-height: 96px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 30px rgba(77, 86, 104, 0.08);
+      font: inherit;
+      text-align: center;
+    }
+
+    .phonics-sound-card,
+    .phonics-option-card {
+      cursor: pointer;
+    }
+
+    .phonics-sound-card strong,
+    .phonics-option-card strong,
+    .phonics-drop-slot strong {
+      display: block;
+      color: #111827;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.1rem;
+      line-height: 1.05;
+    }
+
+    .phonics-sound-card span,
+    .phonics-option-card span,
+    .phonics-drop-slot span {
+      display: block;
+      margin-top: 6px;
+      color: #8a92a0;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .phonics-sound-card:hover,
+    .phonics-option-card:hover,
+    .phonics-sound-card.active,
+    .phonics-option-card.selected,
+    .phonics-drop-slot.filled {
+      border-color: rgba(17, 166, 109, 0.42);
+      background: #f1fbf4;
+      transform: translateY(-2px);
+    }
+
+    .phonics-phoneme-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin: 12px 0 18px;
+      color: #a0a7b2;
+      font-weight: 900;
+    }
+
+    .phonics-phoneme-row span {
+      min-width: 62px;
+      padding: 8px 10px;
+      border-radius: 15px;
+      background: rgba(247, 250, 248, 0.92);
+    }
+
+    .phonics-phoneme-row span::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 0 auto 8px;
+      border-radius: 999px;
+      background: #cfd5dc;
+    }
+
+    .phonics-phoneme-row .active::before {
+      background: #2f80ed;
+    }
+
+    .phonics-phoneme-row .active {
+      color: #0c9465;
+      background: #effaf2;
+    }
+
+    .phonics-decode-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 560px;
+      margin: 14px auto 18px;
+    }
+
+    .phonics-decode-steps span {
+      display: grid;
+      gap: 4px;
+      padding: 12px 10px;
+      border: 1px solid rgba(17, 166, 109, 0.14);
+      border-radius: 16px;
+      color: #0c9465;
+      background: #f1fbf4;
+      font-size: 0.92rem;
+      font-weight: 900;
+    }
+
+    .phonics-decode-steps strong {
+      color: #111827;
+      font-size: 1.05rem;
+    }
+
+    .phonics-gpc-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(80px, 112px));
+      gap: 12px;
+      justify-content: center;
+      margin: 18px auto 22px;
+    }
+
+    .phonics-drop-slot {
+      display: grid;
+      place-items: center;
+      border-style: dashed;
+      color: #b0b7c1;
+    }
+
+    .phonics-drop-slot.filled {
+      border-style: solid;
+      color: #111827;
+    }
+
+    .phonics-result {
+      min-height: 24px;
+      margin: 8px auto 18px;
+      color: #0c9465;
+      font-weight: 900;
+    }
+
+    .phonics-result.error {
+      color: #c44b3f;
+    }
+
+    .phonics-focus-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 14px auto 20px;
+    }
+
+    .phonics-focus-row span {
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #0c9465;
+      background: #effaf2;
+      font-weight: 900;
+    }
+
+    .phonics-mini-meaning {
+      margin: -8px 0 18px;
+      color: #8a92a0;
+      font-weight: 800;
+    }
+
+    .phonics-complete-card {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: clamp(28px, 6vw, 54px);
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(239, 250, 242, 0.95), rgba(255, 246, 204, 0.9));
+      box-shadow: 0 22px 58px rgba(77, 86, 104, 0.12);
+    }
+
+    .phonics-complete-card strong {
+      display: block;
+      color: #0c9465;
+      font-size: clamp(2.2rem, 7vw, 4.8rem);
+      line-height: 1;
+    }
+
+    .phonics-sentence-picture {
+      width: min(560px, 92vw);
+      aspect-ratio: 16 / 9;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #ffe08a, #dff4fb);
+      box-shadow: 0 20px 54px rgba(77, 86, 104, 0.13);
+    }
+
+    .phonics-sentence-picture span {
+      font-size: clamp(3.8rem, 9vw, 6.8rem);
+    }
+
+    .phonics-speaker {
+      border: 0;
+      cursor: pointer;
+      width: 34px;
+      height: 34px;
+      margin-left: 8px;
+      border-radius: 999px;
+      color: #0c9465;
+      background: #effaf2;
+      font: inherit;
+      font-size: 1rem;
+    }
+
+    .phonics-modal.rounded .phonics-letter {
+      font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+      font-weight: 900;
+    }
+
+    .phonics-sound {
+      color: #87909b;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .phonics-words {
+      margin: 54px 0 48px;
+      color: #4c5564;
+      font-weight: 800;
+    }
+
+    .phonics-prompt {
+      margin: 0 auto 20px;
+      color: #606977;
+      max-width: 520px;
+    }
+
+    .phonics-practice-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .phonics-record {
+      min-width: 260px;
+      color: #fff;
+      background: linear-gradient(135deg, #11a66d, #21bf86);
+    }
+
+    .phonics-next {
+      min-width: 86px;
+      color: #fff;
+      background: linear-gradient(135deg, #bdebdc, #77d9b8);
+      font-size: 1.4rem;
+    }
+
+    .phonics-status {
+      min-height: 26px;
+      margin: 16px auto 0;
+      color: #697282;
+      font-size: 0.95rem;
+      font-weight: 800;
+      max-width: 560px;
+    }
+
+    .phonics-playback {
+      display: block;
+      width: min(360px, 100%);
+      margin: 12px auto 0;
+    }
+
+    .phonics-playback[hidden] {
+      display: none;
+    }
+
+    .phonics-side-prompts {
+      position: absolute;
+      left: 38px;
+      bottom: 82px;
+      display: grid;
+      gap: 10px;
+      max-width: 230px;
+      text-align: left;
+    }
+
+    .phonics-side-prompts span {
+      width: fit-content;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: #f0f0ef;
+      color: #303747;
+      font-weight: 800;
+    }
+
+    .phonics-settings {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 130;
+      width: min(380px, 100vw);
+      height: 100vh;
+      padding: 24px;
+      background: #fffdf9;
+      box-shadow: -20px 0 50px rgba(39, 48, 67, 0.14);
+      transform: translateX(100%);
+      transition: transform 0.25s ease;
+      overflow-y: auto;
+    }
+
+    .phonics-settings.open {
+      transform: translateX(0);
+    }
+
+    .phonics-setting-group {
+      padding: 20px 0;
+      border-top: 1px solid #ecebea;
+    }
+
+    .phonics-setting-group h4 {
+      margin: 0 0 4px;
+    }
+
+    .phonics-choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .phonics-choice {
+      border: 1px solid #e4e4e2;
+      cursor: pointer;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #fff;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .phonics-choice.active {
+      color: #0b9c69;
+      border-color: #18bb7e;
+      background: #effaf2;
+    }
+
+    .phonics-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      color: #596274;
+      font-weight: 800;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        min-height: auto;
+        padding: 16px 0;
+        align-items: flex-start;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 14px;
+        background: white;
+        color: var(--ink);
+        font-size: 1.3rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 70px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 18px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a,
+      .nav-links button {
+        width: 100%;
+      }
+
+      .hero-grid,
+      .mom-panel,
+      .map-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .course-grid,
+      .content-hub-grid,
+      .blog-grid,
+      .team-grid,
+      .planet-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .course-card-wide {
+        grid-column: span 2;
+        grid-template-columns: 1fr;
+      }
+
+      .course-card-practice {
+        grid-column: span 2;
+      }
+
+      .phonics-lab {
+        grid-template-columns: 1fr;
+      }
+
+      .phonics-side-prompts {
+        position: static;
+        margin-top: -28px;
+        max-width: none;
+        justify-items: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 52px 0;
+      }
+
+      .hero {
+        padding: 52px 0 34px;
+      }
+
+      .logo {
+        width: 160px;
+      }
+
+      .hero-brand {
+        width: 240px;
+      }
+
+      .trust-row,
+      .course-grid,
+      .content-hub-grid,
+      .blog-grid,
+      .team-grid,
+      .planet-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .course-card-wide {
+        grid-column: span 1;
+      }
+
+      .course-card-practice {
+        grid-column: span 1;
+      }
+
+      .hero-card {
+        padding: 20px;
+      }
+
+      .story-bubble {
+        width: 92%;
+      }
+
+      .kid-orbit {
+        width: 150px;
+        height: 150px;
+      }
+
+      .kid-orbit span {
+        font-size: 3.4rem;
+      }
+
+      .path-card,
+      .mom-panel,
+      .map-panel {
+        padding: 18px;
+        border-radius: 24px;
+      }
+
+      .roadmap-frame {
+        border-radius: 0;
+      }
+
+      .roadmap-table {
+        min-width: 980px;
+      }
+
+      .map-wrap {
+        min-height: 360px;
+      }
+
+      .city-dot::after {
+        display: none;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        align-items: flex-start;
+        margin-left: 0;
+      }
+
+      .footer-logo {
+        width: 132px;
+      }
+
+      .footer-link-row {
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .phonics-levels,
+      .phonics-map-panel {
+        border-radius: 24px;
+      }
+
+      .phonics-map {
+        min-height: 300px;
+      }
+
+      .phonics-node-label {
+        left: 50%;
+        top: 112px;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+
+      .phonics-node-gpc {
+        left: 10%;
+        top: 180px;
+      }
+
+      .phonics-node-word {
+        left: 8%;
+        top: 238px;
+      }
+
+      .phonics-node-sentence {
+        right: 6%;
+        top: 190px;
+      }
+
+      .phonics-practice-screen {
+        padding: 14px 14px 24px;
+      }
+
+      .phonics-flow {
+        min-height: 680px;
+      }
+
+      .phonics-flow-step {
+        width: 86%;
+        gap: 10px;
+      }
+
+      .phonics-flow-index {
+        flex-basis: 64px;
+        width: 64px;
+        height: 40px;
+      }
+
+      .phonics-flow-step-1 { left: 10%; top: 22px; }
+      .phonics-flow-step-2 { left: 28%; top: 94px; }
+      .phonics-flow-step-3 { left: 10%; top: 166px; }
+      .phonics-flow-step-4 { left: 26%; top: 238px; }
+      .phonics-flow-step-5 { left: 8%; top: 310px; }
+      .phonics-flow-step-6 { left: 26%; top: 382px; }
+      .phonics-flow-step-7 { left: 10%; top: 454px; }
+      .phonics-flow-step-8 { left: 28%; top: 526px; }
+      .phonics-flow-step-9 { left: 10%; top: 598px; }
+
+      .phonics-flow-step.active .phonics-flow-text {
+        padding: 10px 12px;
+      }
+
+      .phonics-flow-copy {
+        display: none;
+      }
+
+      .phonics-decode-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .phonics-core-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .phonics-practice-actions .btn {
+        width: 100%;
+      }
+
+      .phonics-record,
+      .phonics-next {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="rainbow-strip" aria-hidden="true"></div>
+    <nav class="nav" aria-label="主导航">
+      <a class="logo" href="#top" aria-label="ForU伴学 首页">
+        <!-- 品牌 Logo：如需替换，更新 public/logo.png 即可 -->
+        <img src="public/logo.png" alt="ForU伴学 Logo" />
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="打开导航菜单" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#courses">课程体系</a>
+        <a href="#mom">妈妈心力成长</a>
+        <a href="#blog">内容库</a>
+        <a href="#planet">成长星球</a>
+        <a href="#about">关于我们</a>
+        <button class="btn btn-soft" type="button" data-open-phonics>自然拼读练习室</button>
+        <button class="btn btn-primary" type="button" data-qr="体验营二维码" data-title="免费加入7天体验营">
+          🔥 免费加入7天体验营
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-brand" aria-label="ForU伴学 品牌标识">
+            <!-- Hero 区品牌 Logo：如需替换，更新 public/logo.png 即可 -->
+            <img src="public/logo.png" alt="ForU伴学 Logo" />
+          </div>
+          <p class="eyebrow">科学方法 + 真实陪伴</p>
+          <h1>陪孩子走好英语启蒙每一步</h1>
+          <p class="hero-lead">
+            ForU伴学相信，英语启蒙不是把孩子推向焦虑，而是给家庭一条清晰、温柔、可坚持的路。
+            我们用两年路径规划、亲子陪跑和社群支持，帮孩子从零基础走向自主阅读。
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-qr="体验群二维码" data-title="扫码加入7天体验营">
+              🔥 免费加入7天体验营
+            </button>
+            <a class="btn btn-soft" href="#path">查看两年启蒙路径</a>
+            <button class="btn btn-soft" type="button" data-open-phonics>老用户进入练习室</button>
+          </div>
+          <div class="trust-row" aria-label="品牌信任点">
+            <div class="trust-pill">
+              <strong>2年</strong>
+              <span>从零基础到自主阅读路径</span>
+            </div>
+            <div class="trust-pill">
+              <strong>4位</strong>
+              <span>专业妈妈教师团队陪跑</span>
+            </div>
+            <div class="trust-pill">
+              <strong>7天</strong>
+              <span>免费体验营先感受方法</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="ForU伴学两年路径速览">
+          <div class="hero-card">
+            <span class="hero-card-kicker">2年陪跑地图</span>
+            <h2>听说读写，按孩子的节奏长出来</h2>
+            <p class="hero-card-desc">右侧作为两年路径速览：先把声音输入做扎实，再带孩子开口表达，随后读写并行，最终走向英文初章书。</p>
+            <ul class="hero-path-list">
+              <li><span class="hero-path-dot">1</span><div><strong>听力打底</strong><br />用童谣、绘本音频和生活指令建立可理解输入，让孩子先听得懂、愿意听。</div></li>
+              <li><span class="hero-path-dot">2</span><div><strong>口语输出</strong><br />用亲子问答、故事复述和主题表达，把听懂的内容慢慢变成说得出来。</div></li>
+              <li><span class="hero-path-dot">3</span><div><strong>读写并行</strong><br />自然拼读、分级阅读和复述书写同步推进，让阅读和表达互相托举。</div></li>
+              <li><span class="hero-path-dot">4</span><div><strong>走向自主阅读</strong><br />用 L1-L3 三阶段伴学，帮助孩子听力入章、阅读入章，进入英文初章书。</div></li>
+            </ul>
+            <div class="hero-card-actions">
+              <a class="btn btn-primary" href="#courses">看课程安排</a>
+              <a class="btn btn-soft" href="#path">看两年路径</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="path">
+      <div class="section-head">
+        <p class="section-kicker">Two-Year Roadmap</p>
+        <h2>两年英语启蒙路径图</h2>
+        <p class="section-desc">
+          从听力输入、口语输出，到自然拼读和自主阅读，用一张路径图帮家庭看清每一步。
+        </p>
+      </div>
+      <div class="path-card">
+        <div class="roadmap-frame" role="img" aria-label="英语启蒙规划路线 ForU伴学">
+          <table class="roadmap-table">
+            <colgroup>
+              <col class="roadmap-row-label" />
+              <col class="roadmap-col-narrow" />
+              <col class="roadmap-col-narrow" />
+              <col class="roadmap-col-narrow" />
+              <col class="roadmap-col-narrow" />
+              <col class="roadmap-col-mid" />
+              <col class="roadmap-col-wide" />
+              <col class="roadmap-col-last" />
+              <col class="roadmap-col-last" />
+            </colgroup>
+            <thead>
+              <tr class="roadmap-title">
+                <th colspan="9">英语启蒙规划路线（ForU伴学）</th>
+              </tr>
+              <tr class="roadmap-duration">
+                <th scope="row">时长</th>
+                <th scope="col">2个月</th>
+                <th scope="col">2个月</th>
+                <th scope="col">2个月</th>
+                <th scope="col">2个月</th>
+                <th scope="col">4个月</th>
+                <th scope="col">8个月</th>
+                <th scope="col" colspan="2">8个月</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="roadmap-goal">
+                <th class="roadmap-row-label" scope="row">目标</th>
+                <td>拉听力<small>500听力词汇<br />第一桶金</small></td>
+                <td>口语输出<small>简单故事复述</small></td>
+                <td>拉听力<small>1000听力词汇<br />积攒视觉词</small></td>
+                <td>口语输出<small>完整故事复述</small></td>
+                <td>自主阅读<small>L1启蒙期-250L<br />字母、词汇、句型书写</small></td>
+                <td>自主阅读<small>L2进阶期-400L<br />句子、段落、写作<br />桥梁书</small></td>
+                <td colspan="2">自主阅读<small>L3流利期-550L<br />句子、段落、策略写作<br />章节书</small></td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">动画片</th>
+                <td>Big Muzzy1-6集<small>被冰</small></td>
+                <td>Wow English<small>1-3季</small></td>
+                <td>Big Muzzy7-12<small>拔高</small></td>
+                <td>Wow English<small>4-6季</small></td>
+                <td>小狐狸1-2阶<small>Big Muzzy指读</small></td>
+                <td>小猪佩奇 / 小狐狸3-5阶</td>
+                <td colspan="2">小狐狸6-9阶</td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">主线分级</th>
+                <td>RAZ AA</td>
+                <td>RAZ A</td>
+                <td>RAZ B</td>
+                <td>RAZ C</td>
+                <td>RAZ C-D</td>
+                <td>RAZ E-F-G-H</td>
+                <td>RAZ I-J</td>
+                <td>RAZ K+</td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">拓展分级</th>
+                <td>海尼曼 GK<small>校内分级</small></td>
+                <td>牛津树<small>校内分级</small></td>
+                <td>牛津树1-2</td>
+                <td>牛津树3-4</td>
+                <td>上一阶段海尼曼和牛津树<small>校内分级</small></td>
+                <td>牛津树4-6</td>
+                <td>牛津树7-8</td>
+                <td>牛津树9</td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">自然拼读</th>
+                <td>\</td>
+                <td>\</td>
+                <td>高频词</td>
+                <td>高频词</td>
+                <td>音素意识<small>字母音、字母型<br />CVC单词</small></td>
+                <td>故事+科普解码阅读<small>复合音素</small></td>
+                <td colspan="2">故事+科普解码阅读<small>在阅读中大量内化规则</small></td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">原版教材</th>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>Booklife readers L1<small>指读</small></td>
+                <td>Booklife readers L2 ~ L4<small>指读</small></td>
+                <td colspan="2">Booklife readers L4+ ~ L6<small>等原版教材</small></td>
+              </tr>
+              <tr>
+                <th class="roadmap-row-label" scope="row">科普</th>
+                <td colspan="2">highlight科普第1级</td>
+                <td colspan="3">Jump 蝌蚪</td>
+                <td>Jump 牛蛙</td>
+                <td colspan="2">Jump 袋鼠 蓝鹰</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="roadmap-watermark" aria-hidden="true"></div>
+        </div>
+        <!-- 两年路径图：当前按你发来的截图重建为 HTML 表格；若后续有正式图片，可直接替换为 img。 -->
+        <div class="path-note">
+          <strong>不确定起点？扫码添加老师，免费获取1对1路径定位。</strong>
+          <button class="btn btn-primary" type="button" data-qr="老师个人微信二维码" data-title="添加老师获取路径定位">
+            扫码做路径定位
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-head">
+        <p class="section-kicker">Course System</p>
+        <h2>课程体系</h2>
+        <p class="section-desc">听力口语课分阶段报名，自然拼读作为训练工具贯穿其中，自主阅读用两年伴学带孩子进入初章书。</p>
+      </div>
+      <div class="grid course-grid">
+        <article class="course-card">
+          <div class="course-icon">🎧</div>
+          <span class="course-badge">听力阶段 1</span>
+          <h3>听力基础课</h3>
+          <div class="course-price">¥399 <small>/ 7周交付</small></div>
+          <p>建立童谣、绘本音频和日常指令的可理解输入，先让孩子听得懂、愿意听。</p>
+          <div class="course-meta"><span>可单报</span><span>两阶段联报优惠100元</span></div>
+          <button class="btn btn-soft" type="button" data-qr="JoJo工作微信二维码" data-title="了解听力基础课">了解课程</button>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">🌊</div>
+          <span class="course-badge">听力阶段 2</span>
+          <h3>听力提高课</h3>
+          <div class="course-price">¥399 <small>/ 7周交付</small></div>
+          <p>从听懂单句过渡到听懂短故事和关键信息，为后续口语输出和阅读理解打底。</p>
+          <div class="course-meta"><span>可单报</span><span>两阶段联报优惠100元</span></div>
+          <button class="btn btn-soft" type="button" data-qr="JoJo工作微信二维码" data-title="了解听力提高课">了解课程</button>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">🗣️</div>
+          <span class="course-badge">口语阶段 1</span>
+          <h3>口语基础课</h3>
+          <div class="course-price">¥499 <small>/ 8周交付</small></div>
+          <p>从日常问答、核心句型和高频表达开始，帮助孩子敢开口、能回应。</p>
+          <div class="course-meta"><span>可单报</span><span>两课联报减免100元</span></div>
+          <button class="btn btn-soft" type="button" data-qr="JoJo工作微信二维码" data-title="了解口语基础课">了解课程</button>
+        </article>
+        <article class="course-card">
+          <div class="course-icon">🎙️</div>
+          <span class="course-badge">口语阶段 2</span>
+          <h3>口语提高课</h3>
+          <div class="course-price">¥499 <small>/ 8周交付</small></div>
+          <p>通过故事复述、主题表达和情境任务，让孩子从短句走向完整表达。</p>
+          <div class="course-meta"><span>可单报</span><span>两课联报减免100元</span></div>
+          <button class="btn btn-soft" type="button" data-qr="JoJo工作微信二维码" data-title="了解口语提高课">了解课程</button>
+        </article>
+        <article class="course-card course-card-wide">
+          <div>
+            <div class="course-icon">📖</div>
+            <span class="course-badge">两年伴学主线课</span>
+            <h3>自主阅读课</h3>
+            <div class="course-price">¥1599 <small>/ 伴学两年</small></div>
+            <p>包含 L1 启蒙阶段、L2 进阶阶段、L3 流利阶段，目标是帮助孩子完成听力入章和阅读入章，进入英文初章书学习。</p>
+            <p>从听说走向读写。</p>
+            <div class="course-meta"><span>目标：听力入章</span><span>目标：阅读入章</span><span>进入英文初章书</span></div>
+            <button class="btn btn-primary" type="button" data-qr="JoJo工作微信二维码" data-title="了解自主阅读课">了解自主阅读课</button>
+          </div>
+          <ul class="course-stage-list">
+            <li><strong>L1 启蒙阶段</strong>从分级读物和短句阅读起步，建立阅读习惯与基础理解。</li>
+            <li><strong>L2 进阶阶段</strong>增加篇幅和主题复杂度，训练复述、预测和细节提取。</li>
+            <li><strong>L3 流利阶段</strong>过渡到初章书，帮助孩子听力和阅读都进入章节书学习。</li>
+          </ul>
+        </article>
+        <article class="course-card course-card-practice" id="phonics-practice">
+          <div class="course-icon">🔤</div>
+          <span class="course-badge">训练板块 · 非单独课程</span>
+          <h3>自然拼读练习</h3>
+          <p>自然拼读只是英语学习过程中的一个工具，不是单独售卖的一门课。我们会在整个课程中教家长和孩子如何使用这个工具，帮助阅读和拼写更顺畅。</p>
+          <ul class="course-practice-points">
+            <li>声音基础：听力词汇、音素意识、字母音和 CVC 单词。</li>
+            <li>规则练习：高频词、字母组合、复合音素和常见拼读规律。</li>
+            <li>阅读落点：用故事和科普文本反复解码，在阅读中内化规则。</li>
+          </ul>
+          <p class="course-note">家长不用担心为自然拼读额外付费，它会作为听说读写主线里的训练方法一起交付。</p>
+          <a class="btn btn-soft" href="#phonics-lab">进入自然拼读练习室</a>
+        </article>
+      </div>
+      <p class="course-disclaimer">
+        <strong>重要说明：</strong>上面的所有价格仅包含电子档文件，不包含任何纸质版文件。书写册等材料需要家长自行打印或购买。
+      </p>
+    </section>
+
+    <section class="section phonics-lab-section" id="phonics-lab">
+      <div class="section-head">
+        <p class="section-kicker">Phonics Practice</p>
+        <h2>自然拼读练习室 · Level 1 体验版</h2>
+        <p class="section-desc">
+          当前先开放 Level 1 体验闭环：按“小组字素 → GPC拼词 → Decoding解码”推进。老学员可直接点击任意小站复习，正式音频和更多 Level 会持续补齐。
+        </p>
+      </div>
+      <div class="phonics-lab">
+        <aside class="phonics-levels" aria-label="自然拼读级别列表">
+          <div id="phonicsLevelList"></div>
+        </aside>
+        <div class="phonics-map-panel">
+          <div class="phonics-level-hero">
+            <strong id="phonicsLevelName">Level 1+</strong>
+            <span id="phonicsLevelTitle">基础字素与短元音入门</span>
+          </div>
+          <p class="phonics-flow-core" id="phonicsCoreLabel">Level 1：每次只解锁一组核心字素，再马上练习和解码。</p>
+          <div class="phonics-flow" aria-label="自然拼读纵向学习轴">
+            <svg class="phonics-flow-path" viewBox="0 0 720 1040" aria-hidden="true" focusable="false">
+              <path d="M414 54 C540 104 534 174 330 188 C170 200 188 282 410 302 C586 318 560 397 340 420 C160 438 196 516 430 536 C594 550 540 630 318 648 C152 662 180 746 404 766 C590 783 550 862 338 886 C190 904 220 972 432 998" fill="none" stroke="rgba(39,48,67,.08)" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 20" />
+              <path d="M414 54 C540 104 534 174 330 188 C170 200 188 282 410 302 C586 318 560 397 340 420 C160 438 196 516 430 536 C594 550 540 630 318 648 C152 662 180 746 404 766 C590 783 550 862 338 886 C190 904 220 972 432 998" fill="none" stroke="rgba(33,191,134,.16)" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 22" />
+            </svg>
+            <button class="phonics-flow-step phonics-flow-step-1 active" type="button" data-phonics-card="0">
+              <span class="phonics-flow-index" data-index="1"></span>
+              <span class="phonics-flow-text">
+                <small>Set 1 · Core</small>
+                <strong data-step-label>先学音素 s/a/t/p</strong>
+                <span class="phonics-flow-copy">今天只学 4 个短促字母音：s / a / t / p。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-2" type="button" data-phonics-card="1">
+              <span class="phonics-flow-index" data-index="2"></span>
+              <span class="phonics-flow-text">
+                <small>Set 1 · GPC</small>
+                <strong data-step-label>再做 GPC 拼词</strong>
+                <span class="phonics-flow-copy">先学完 s / a / t / p，再用它们练 sat / tap / pat。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-3" type="button" data-phonics-card="2">
+              <span class="phonics-flow-index" data-index="3"></span>
+              <span class="phonics-flow-text">
+                <small>Set 1 · Decoding</small>
+                <strong data-step-label>最后做 Decoding</strong>
+                <span class="phonics-flow-copy">再把声音连起来，读出 sat / tap / pat。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-4" type="button" data-phonics-card="3">
+              <span class="phonics-flow-index" data-index="4"></span>
+              <span class="phonics-flow-text">
+                <small>Set 2 · Core</small>
+                <strong data-step-label>先学音素 i/n/m/d</strong>
+                <span class="phonics-flow-copy">再解锁 4 个新音，不急着一次学完 Level 1。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-5" type="button" data-phonics-card="4">
+              <span class="phonics-flow-index" data-index="5"></span>
+              <span class="phonics-flow-text">
+                <small>Set 2 · GPC</small>
+                <strong data-step-label>再做 GPC 拼词</strong>
+                <span class="phonics-flow-copy">学完 i / n / m / d，再去练 pin / nap / map。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-6" type="button" data-phonics-card="5">
+              <span class="phonics-flow-index" data-index="6"></span>
+              <span class="phonics-flow-text">
+                <small>Set 2 · Decoding</small>
+                <strong data-step-label>最后做 Decoding</strong>
+                <span class="phonics-flow-copy">再把声音合起来，读 pin / mat / did。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-7" type="button" data-phonics-card="6">
+              <span class="phonics-flow-index" data-index="7"></span>
+              <span class="phonics-flow-text">
+                <small>Set 3 · Core</small>
+                <strong data-step-label>先学音素 g/o/c/k</strong>
+                <span class="phonics-flow-copy">继续每天一点点，进入第三组核心字素。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-8" type="button" data-phonics-card="7">
+              <span class="phonics-flow-index" data-index="8"></span>
+              <span class="phonics-flow-text">
+                <small>Set 3 · GPC</small>
+                <strong data-step-label>再做 GPC 拼词</strong>
+                <span class="phonics-flow-copy">学完 g / o / c / k，再去练 cat / cot / dog。</span>
+              </span>
+            </button>
+            <button class="phonics-flow-step phonics-flow-step-9" type="button" data-phonics-card="8">
+              <span class="phonics-flow-index" data-index="9"></span>
+              <span class="phonics-flow-text">
+                <small>Set 3 · Decoding</small>
+                <strong data-step-label>最后做 Decoding</strong>
+                <span class="phonics-flow-copy">最后再读 cat / dog / kit，完成一轮闭环。</span>
+              </span>
+            </button>
+          </div>
+          <div class="phonics-start-card">
+            <p id="phonicsStartSummary">Level 1 · Set 1：先学 s / a / t / p，再马上练习。</p>
+            <div class="phonics-start-actions">
+              <button class="btn btn-primary phonics-start-button" type="button" data-open-phonics>开始练习</button>
+              <button class="btn btn-soft phonics-reset-button" type="button" id="phonicsResetButton" hidden>从头开始</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mom-section" id="mom">
+      <div class="soft-panel mom-panel">
+        <div>
+          <p class="section-kicker">For Moms</p>
+          <h2>妈妈心力成长课</h2>
+          <div class="tag-row">
+            <span class="tag">免费</span>
+            <span class="tag">社群陪伴</span>
+            <span class="tag">AI书单</span>
+          </div>
+          <p class="section-desc">
+            陪读路上，你的情绪和困惑，我们来承接。这里不制造焦虑，只给妈妈一套看得懂、做得到、可复盘的方法。
+          </p>
+          <button class="btn btn-sky" type="button" data-qr="妈妈心力成长社群二维码" data-title="加入妈妈心力成长课">
+            领取免费陪读支持
+          </button>
+        </div>
+        <button class="mom-visual mom-directory-card" type="button" data-open-mom-directory aria-label="查看妈妈心力成长课精选目录">
+          <p class="mom-quote">“孩子需要英语启蒙，妈妈也需要被看见、被理解、被支持。”</p>
+          <ul class="mom-list">
+            <li>✓ 每周一个陪读小任务，降低开始难度</li>
+            <li>✓ AI书单按年龄、兴趣和基础推荐</li>
+            <li>✓ 社群答疑承接妈妈的真实卡点</li>
+          </ul>
+          <span class="mom-directory-hint">查看精选音频目录 →</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="section-head">
+        <p class="section-kicker">Content Library</p>
+        <h2>启蒙陪跑内容库</h2>
+        <p class="section-desc">ForU伴学团队用心陪伴各位家长，助力小朋友完成英语启蒙成长。这里有你需要的启蒙方法，有我们的 For U 视频课堂，也有妈妈陪跑电台。</p>
+      </div>
+      <div class="content-hub-grid" aria-label="启蒙陪跑内容库入口">
+        <button class="content-hub-card content-hub-method" type="button" data-blog-filter="method">
+          <span class="content-hub-icon">📚</span>
+          <h3>启蒙方法库</h3>
+          <p>承接公众号沉淀下来的底层逻辑文章，后续按 6 个专题持续更新。</p>
+          <ul class="content-topic-list">
+            <li>路线规划</li>
+            <li>听力打底</li>
+            <li>口语输出</li>
+            <li>自然拼读</li>
+            <li>自主阅读</li>
+            <li>避坑答疑</li>
+          </ul>
+        </button>
+        <button class="content-hub-card content-hub-video" type="button" data-blog-filter="video-school">
+          <span class="content-hub-icon">🎬</span>
+          <h3>For U 视频课堂</h3>
+          <p>放录制课程、方法演示、平台短视频和小朋友阶段成果展示。</p>
+          <ul class="content-topic-list">
+            <li>老师小课</li>
+            <li>方法演示</li>
+            <li>成长影像</li>
+          </ul>
+        </button>
+        <button class="content-hub-card content-hub-radio" type="button" data-blog-filter="radio">
+          <span class="content-hub-icon">🎧</span>
+          <h3>妈妈陪跑电台</h3>
+          <p>沉淀四位合伙人的口播语音，重点服务妈妈的心力成长和陪读节奏。</p>
+          <ul class="content-topic-list">
+            <li>JoJo</li>
+            <li>Candy</li>
+            <li>Apple / Luna</li>
+          </ul>
+        </button>
+      </div>
+      <div class="blog-toolbar" aria-label="启蒙陪跑内容类型">
+        <button class="blog-filter active" type="button" data-blog-filter="all">最近更新</button>
+        <button class="blog-filter" type="button" data-blog-filter="method">启蒙方法库</button>
+        <button class="blog-filter" type="button" data-blog-filter="video-school">视频课堂</button>
+        <button class="blog-filter" type="button" data-blog-filter="radio">妈妈陪跑电台</button>
+      </div>
+      <div class="grid blog-grid" id="blogGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="planet">
+      <div class="section-head">
+        <p class="section-kicker">Growth Planet</p>
+        <h2>成长星球</h2>
+        <p class="section-desc">不做冰冷的“学员风采”，只记录一个个真实家庭的小小光点。点击地图光点查看简介，并可打开完整成长记录。</p>
+      </div>
+      <div class="map-panel">
+        <div class="map-wrap" aria-label="学员城市地图">
+          <svg class="map-svg" viewBox="0 0 900 560" aria-hidden="true">
+            <path
+              class="map-land"
+              d="M96 184 C123 126 192 92 258 111 C301 124 328 158 366 149 C407 139 443 116 488 136 C516 149 530 178 561 184 C604 193 641 159 689 176 C745 196 785 246 778 300 C771 351 725 384 671 377 C623 371 604 336 559 339 C503 343 475 402 414 402 C358 402 338 354 290 347 C235 339 198 388 145 366 C93 345 64 289 76 238 C80 218 88 199 96 184Z"
+            />
+            <path
+              class="map-land"
+              d="M118 170 C164 136 215 143 251 171 C220 187 183 194 145 188 C133 186 124 181 118 170Z"
+            />
+            <path
+              class="map-land"
+              d="M604 398 C647 371 716 390 744 438 C770 483 739 520 682 511 C634 504 592 463 604 398Z"
+            />
+            <path class="map-line" d="M90 116 C226 70 376 70 514 115 C650 160 764 248 812 356" />
+            <path class="map-line" d="M114 450 C254 512 464 522 650 466 C722 444 779 413 823 374" />
+            <path class="map-line" d="M450 64 C424 171 423 335 450 496" />
+            <path class="map-line" d="M72 280 H828" />
+          </svg>
+          <div id="studentDots"></div>
+        </div>
+        <div class="planet-list" id="studentList">
+          <article class="planet-card">
+            <h3>成长记录加载中</h3>
+            <p>如果长期未显示，请确认同目录下的 students.json 已上传。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <p class="section-kicker">About ForU</p>
+        <h2>关于我们</h2>
+        <p class="section-desc">我们是专业的妈妈教师团队：首先是妈妈，也是一线教育工作中的老师。我们把真实的伴学经验、课堂方法和家庭节奏交付给大家，真心想带着孩子拿到结果，摆脱哑巴英语，打开学习世界的一扇窗。</p>
+      </div>
+      <div class="grid team-grid">
+        <article class="team-card">
+          <div class="team-photo" aria-label="JoJo照片位置">
+            <!-- JoJo照片位置：后续可替换为正式照片 img。 -->
+            <span>JoJo</span>
+          </div>
+          <div class="team-body">
+            <h3>JoJo</h3>
+            <span class="team-role">创始人</span>
+            <p>“从大学讲台到全职妈妈，我找到了更落地的教育。我是JoJo，硕士妈妈，曾是一名大学老师。孩子Leo 4岁半启蒙时我走过弯路，直到放下老师身份做陪跑员。现在Leo能独立讲2分钟英文故事。这套课程是用亲身实践打磨出来的，管用。”</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-photo" aria-label="Candy老师照片位置">
+            <!-- Candy老师照片位置：后续可替换为正式照片 img。 -->
+            <span>Candy</span>
+          </div>
+          <div class="team-body">
+            <h3>Candy老师</h3>
+            <span class="team-role">教研负责人</span>
+            <p>“在课堂和家庭之间找到了平衡。我是Candy，一线小学英语老师，也是CiCi和Ego的妈妈。把教学法变成睡前游戏后，孩子们不仅独立复述故事，还主动拼写单词。我懂教学，更懂孩子。”</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-photo" aria-label="Apple老师照片位置">
+            <!-- Apple老师照片位置：后续可替换为正式照片 img。 -->
+            <span>Apple</span>
+          </div>
+          <div class="team-body">
+            <h3>Apple老师</h3>
+            <span class="team-role">中文阅读指导</span>
+            <p>“用母语思维打通英语阅读。我是Apple，小学语文老师，一年级Koi的妈妈。用预测、联结等中文阅读方法搭脚手架，Koi不仅能稳定输出3分钟故事，还顺利进入拼写阶段。我们不说鸡娃，说搭梯子。”</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-photo" aria-label="Luna / 玲玲照片位置">
+            <!-- Luna / 玲玲照片位置：后续可替换为正式照片 img。 -->
+            <span>Luna</span>
+          </div>
+          <div class="team-body">
+            <h3>Luna / 玲玲</h3>
+            <span class="team-role">游戏化学习设计师</span>
+            <p>“职场妈妈的时间很贵，方法要高效有趣。我是Luna，两个孩子的职场妈妈。把启蒙藏在餐桌和上学路上，7岁的Jerry已进入故事复述和书写阶段。我的任务是帮妈妈们把坚持变成习惯。”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="rainbow-strip" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <div class="footer-logo" aria-label="ForU伴学 页尾标识">
+          <!-- 页尾 Logo：如需替换，更新 public/logo.png 即可 -->
+          <img src="public/logo.png" alt="ForU伴学 Logo" />
+        </div>
+        <p style="margin: 6px 0 0;">陪孩子走好英语启蒙每一步。</p>
+      </div>
+      <div>
+        <p style="margin: 0;">© 2026 ForU伴学. All rights reserved.</p>
+        <p style="margin: 4px 0 0;">欢迎在各平台继续关注 ForU伴学。</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-label">找到我们</span>
+        <div class="footer-link-row">
+          <button class="footer-mini-link" type="button" data-footer-link data-url="#">小红书</button>
+          <button class="footer-mini-link" type="button" data-footer-link data-url="#">抖音</button>
+          <button class="footer-mini-link" type="button" data-footer-link>视频号</button>
+          <button class="footer-mini-link" type="button" data-footer-link>公众号</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="qrModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close aria-label="关闭弹窗">×</button>
+      <h2 id="qrTitle">扫码添加</h2>
+      <p id="qrDesc">扫码添加 JoJo 老师，备注“官网”。</p>
+      <div class="qr-box" id="qrBox">
+        <!-- JoJo老师微信二维码：如需替换，更新 public/wechat-qr.jpg 即可。 -->
+        <img src="public/wechat-qr.jpg" alt="JoJo老师微信二维码" class="qr-image" />
+      </div>
+      <p style="color: var(--muted); text-align: center; margin-bottom: 0;">添加后备注“官网”，老师会为你发送体验营信息。</p>
+    </div>
+  </div>
+
+  <div class="modal" id="studentModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close aria-label="关闭弹窗">×</button>
+      <h2 id="studentTitle">成长简介</h2>
+      <div class="student-image" id="studentImage">🌟</div>
+      <p id="studentStory"></p>
+      <button class="btn btn-primary student-link" type="button" id="studentLinkButton">查看完整成长记录</button>
+    </div>
+  </div>
+
+  <div class="modal" id="blogModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card blog-modal-card">
+      <button class="modal-close" type="button" data-close aria-label="关闭弹窗">×</button>
+      <div class="blog-modal-meta" id="blogModalMeta"></div>
+      <h2 id="blogModalTitle">启蒙陪跑内容库</h2>
+      <p id="blogModalExcerpt" style="color: var(--muted);"></p>
+      <div class="blog-modal-cover" id="blogModalCover"></div>
+      <div class="blog-modal-content" id="blogModalContent"></div>
+      <div class="blog-media-box" id="blogModalMedia" hidden></div>
+    </div>
+  </div>
+
+  <div class="modal" id="momDirectoryModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card blog-modal-card">
+      <button class="modal-close" type="button" data-close aria-label="关闭弹窗">×</button>
+      <div class="blog-modal-meta">
+        <span>首页精选</span>
+        <span>妈妈陪跑电台</span>
+      </div>
+      <h2>妈妈心力成长课精选目录</h2>
+      <p style="color: var(--muted);">这里先展示精选音频标题，后续可从飞书读取完整目录；完整音频会统一沉淀在“妈妈陪跑电台”。</p>
+      <div class="mom-directory-list" id="momDirectoryList"></div>
+      <div class="blog-media-box">
+        <p>后续建议：这里展示 4-6 条精选音频，完整目录放到“妈妈陪跑电台”。如果家长想系统跟练，再引导添加 JoJo 老师。</p>
+        <a class="btn btn-primary" href="#blog" data-close data-blog-filter="radio">查看妈妈陪跑电台</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="phonics-modal" id="phonicsModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="phonics-practice-screen">
+      <div class="phonics-practice-top">
+        <button class="phonics-icon-button" type="button" data-close-phonics aria-label="退出自然拼读练习">×</button>
+        <div class="phonics-progress" aria-label="练习进度"><span id="phonicsProgress"></span></div>
+        <button class="phonics-icon-button" type="button" id="phonicsSettingsButton" aria-label="打开学习偏好设置">⌘</button>
+      </div>
+      <div class="phonics-card-stage">
+        <div class="phonics-stage-shell">
+          <div id="phonicsActivityStage"></div>
+          <div class="phonics-practice-actions">
+            <button class="btn btn-soft" type="button" id="phonicsPlayButton">听示范</button>
+            <button class="btn phonics-record" type="button" id="phonicsRecordButton">点击录音</button>
+            <button class="btn phonics-next" type="button" id="phonicsNextButton" aria-label="下一张">→</button>
+          </div>
+          <p class="phonics-status" id="phonicsStatus">先看提示，再录一遍自己的声音。录音只保存在本次浏览器预览中。</p>
+          <audio class="phonics-playback" id="phonicsPlayback" controls hidden></audio>
+        </div>
+      </div>
+      <div class="phonics-side-prompts" id="phonicsSidePrompts">
+        <span>s says /s/</span>
+        <span>Trust yourself. Speak!</span>
+      </div>
+    </div>
+    <aside class="phonics-settings" id="phonicsSettingsPanel" aria-label="学习偏好设置">
+      <button class="phonics-icon-button" type="button" id="phonicsSettingsClose" aria-label="关闭学习偏好设置">×</button>
+      <h3>学习偏好设置</h3>
+      <p class="section-desc">字体、播放语速与课程引导</p>
+      <div class="phonics-setting-group">
+        <h4>字体设置</h4>
+        <p>页面上核心元素的字体设定</p>
+        <div class="phonics-choice-row">
+          <button class="phonics-choice active" type="button" data-phonics-font="formal">Aa 正式</button>
+          <button class="phonics-choice" type="button" data-phonics-font="rounded">Aa 圆润</button>
+        </div>
+      </div>
+      <div class="phonics-setting-group">
+        <h4>单词或句子播放语速</h4>
+        <div class="phonics-choice-row">
+          <button class="phonics-choice" type="button" data-phonics-speed="1.2">1.2x</button>
+          <button class="phonics-choice active" type="button" data-phonics-speed="1">1.0x</button>
+          <button class="phonics-choice" type="button" data-phonics-speed="0.8">0.8x</button>
+          <button class="phonics-choice" type="button" data-phonics-speed="0.6">0.6x</button>
+        </div>
+      </div>
+      <div class="phonics-setting-group">
+        <h4>课程引导</h4>
+        <label class="phonics-switch"><input type="checkbox" id="phonicsGuideSwitch" checked /> 开启教师课程引导和反馈</label>
+      </div>
+      <div class="phonics-setting-group">
+        <h4>互动形式</h4>
+        <div class="phonics-choice-row">
+          <button class="phonics-choice active" type="button" data-phonics-mode="voiceText">语音 + 文字</button>
+          <button class="phonics-choice" type="button" data-phonics-mode="textOnly">只看文字</button>
+        </div>
+      </div>
+      <p style="color: var(--muted); text-align: right;">已保存</p>
+    </aside>
+  </div>
+
+  <script>
+    const navButton = document.querySelector(".mobile-menu-btn");
+    const navLinks = document.querySelector("#navLinks");
+    const qrModal = document.querySelector("#qrModal");
+    const studentModal = document.querySelector("#studentModal");
+    const qrTitle = document.querySelector("#qrTitle");
+    const qrDesc = document.querySelector("#qrDesc");
+    const qrBox = document.querySelector("#qrBox");
+    const studentTitle = document.querySelector("#studentTitle");
+    const studentImage = document.querySelector("#studentImage");
+    const studentStory = document.querySelector("#studentStory");
+    const studentLinkButton = document.querySelector("#studentLinkButton");
+    const studentDots = document.querySelector("#studentDots");
+    const studentList = document.querySelector("#studentList");
+    const blogModal = document.querySelector("#blogModal");
+    const blogGrid = document.querySelector("#blogGrid");
+    const blogModalMeta = document.querySelector("#blogModalMeta");
+    const blogModalTitle = document.querySelector("#blogModalTitle");
+    const blogModalExcerpt = document.querySelector("#blogModalExcerpt");
+    const blogModalCover = document.querySelector("#blogModalCover");
+    const blogModalContent = document.querySelector("#blogModalContent");
+    const blogModalMedia = document.querySelector("#blogModalMedia");
+    const momDirectoryModal = document.querySelector("#momDirectoryModal");
+    const momDirectoryList = document.querySelector("#momDirectoryList");
+    const phonicsModal = document.querySelector("#phonicsModal");
+    const phonicsSettingsPanel = document.querySelector("#phonicsSettingsPanel");
+    const blogTypeLabels = {
+      all: "全部",
+      article: "文章",
+      note: "贴图短文",
+      video: "视频",
+      podcast: "音频"
+    };
+    const blogItems = [
+      {
+        type: "article",
+        pillar: "method",
+        pillarLabel: "启蒙方法库",
+        category: "启蒙路线规划",
+        title: "孩子什么时候开始英语启蒙更合适？",
+        excerpt: "不只看年龄，更要看家庭节奏、孩子兴趣和可持续的输入环境。",
+        cover: "https://via.placeholder.com/900x520/eff9dd/3f8f59?text=ForU+Article+Cover",
+        duration: "约6分钟阅读",
+        body: [
+          "英语启蒙不是越早越焦虑，而是越清晰越轻松。真正重要的是家庭能不能每天给孩子一点稳定、可理解、可重复的英文输入。",
+          "如果孩子愿意听童谣、看绘本、跟着大人做一点生活指令，就可以从非常轻量的亲子英文开始。开始阶段不用追求输出，先让孩子觉得英文是生活里自然出现的声音。",
+          "这类长文会持续整理成系统资料，方便家长在需要时回来查找。"
+        ]
+      },
+      {
+        type: "article",
+        pillar: "method",
+        pillarLabel: "启蒙方法库",
+        category: "听力与口语",
+        title: "听力打底之后，孩子怎么自然开口？",
+        excerpt: "把输入、复述、亲子互动和主题表达串起来，避免一上来就逼孩子说。",
+        cover: "https://via.placeholder.com/900x520/e8f5d8/3f5e4b?text=Listening+To+Speaking",
+        duration: "约7分钟阅读",
+        body: [
+          "孩子不开口，很多时候不是不愿意，而是还没有足够的可理解输入，也没有安全的表达场景。",
+          "更稳的路径是先让孩子听懂，再通过固定句型、故事复述和生活场景慢慢输出。",
+          "这类内容会归入启蒙方法库，后续可以按专题持续更新。"
+        ]
+      },
+      {
+        type: "note",
+        pillar: "method",
+        pillarLabel: "启蒙方法库",
+        category: "自然拼读与阅读",
+        title: "听力不是背景音，而是可理解输入",
+        excerpt: "短图文适合放一个观点、一个方法、一个可执行的小任务。",
+        cover: "https://via.placeholder.com/900x520/dff4fb/1f6f9d?text=Short+Note",
+        duration: "贴图短文",
+        body: [
+          "今天只做一件事：同一首童谣听 3 天，每天加一个亲子动作。",
+          "孩子不是靠“磨耳朵”突然听懂，而是在声音、动作、图片和生活情境之间建立连接。",
+          "这类内容适合短图文，帮助家长快速拿走一个今天就能执行的小方法。"
+        ]
+      },
+      {
+        type: "video",
+        pillar: "video-school",
+        pillarLabel: "For U 视频课堂",
+        category: "老师小课",
+        title: "老师小课：一节课看懂可理解输入",
+        excerpt: "视频课堂适合放录制课程、方法演示和老师出镜讲解。",
+        cover: "https://via.placeholder.com/900x520/ffe2dc/9f352d?text=Video+Preview",
+        duration: "视频 03:20",
+        mediaUrl: "",
+        body: [
+          "这里后续可以放你们自己录制的视频课、课程切片和老师方法讲解。",
+          "视频承担的是建立信任和降低理解门槛：让家长看见方法怎么落地。"
+        ]
+      },
+      {
+        type: "video",
+        pillar: "video-school",
+        pillarLabel: "For U 视频课堂",
+        category: "成长影像",
+        title: "成长影像：孩子近期成果展示",
+        excerpt: "宣传视频和阶段成果适合放在这里，帮助新家长看到真实变化。",
+        cover: "https://via.placeholder.com/900x520/e8f8ff/1f6f9d?text=Growth+Video",
+        duration: "视频 02:10",
+        mediaUrl: "",
+        body: [
+          "这里可以展示孩子近期的复述、阅读、拼读或表达成果。",
+          "成果视频不需要做成炫技，而是让家长看到：普通孩子经过陪跑，也能一步步产生变化。"
+        ]
+      },
+      {
+        type: "podcast",
+        pillar: "radio",
+        pillarLabel: "妈妈陪跑电台",
+        category: "JoJo · 妈妈心力成长课",
+        title: "JoJo：陪读卡住时，妈妈先做哪一步？",
+        excerpt: "首页心力成长课的精选音频会放这里，完整内容归入妈妈陪跑电台。",
+        cover: "https://via.placeholder.com/900x520/f4f6f0/596274?text=Podcast+Cover",
+        duration: "音频 08:00",
+        mediaUrl: "",
+        body: [
+          "音频电台很适合把原来内部办学 APP 里的语音沉淀到官网，用户可以边做家务边听。",
+          "这类内容服务的是妈妈的心力：先稳住大人，家庭执行才更容易持续。"
+        ]
+      },
+      {
+        type: "podcast",
+        pillar: "radio",
+        pillarLabel: "妈妈陪跑电台",
+        category: "Candy · 课堂方法",
+        title: "Candy：把课堂方法变成家庭小游戏",
+        excerpt: "一线老师视角，帮助家长把教学法翻译成睡前和路上的小任务。",
+        cover: "https://via.placeholder.com/900x520/fff4d6/9a620c?text=Candy+Audio",
+        duration: "音频 06:40",
+        mediaUrl: "",
+        body: [
+          "Candy 老师的音频可以聚焦课堂方法如何家庭化：不要把家变成课堂，而是把方法藏进生活。",
+          "后续飞书接入后，可以按主讲人持续更新。"
+        ]
+      },
+      {
+        type: "podcast",
+        pillar: "radio",
+        pillarLabel: "妈妈陪跑电台",
+        category: "Apple / Luna · 阅读与坚持",
+        title: "Apple / Luna：如何让坚持变成家庭节奏？",
+        excerpt: "阅读陪跑、游戏化坚持和职场妈妈的时间切片，都可以沉淀在电台里。",
+        cover: "https://via.placeholder.com/900x520/ffe9df/9f352d?text=Mom+Radio",
+        duration: "音频 07:30",
+        mediaUrl: "",
+        body: [
+          "这类音频适合处理妈妈每天都会遇到的真实问题：没时间、没耐心、孩子抗拒、坚持不下去。",
+          "妈妈陪跑电台不是单纯内容展示，而是让用户持续感受到 ForU 的陪伴方式。"
+        ]
+      }
+    ];
+    const momDirectoryItems = [
+      {
+        host: "JoJo",
+        title: "陪读卡住时，妈妈先做哪一步？",
+        duration: "08:00",
+        summary: "适合刚开始焦虑、觉得自己推不动孩子的妈妈。"
+      },
+      {
+        host: "JoJo",
+        title: "孩子不愿意开口，是不是方法错了？",
+        duration: "09:20",
+        summary: "先区分输入不够、场景不安全，还是任务太难。"
+      },
+      {
+        host: "Candy",
+        title: "把课堂方法变成睡前小游戏",
+        duration: "06:40",
+        summary: "用老师视角讲清楚，家庭里怎么轻量执行。"
+      },
+      {
+        host: "Apple / Luna",
+        title: "普通妈妈怎么把坚持变成家庭节奏？",
+        duration: "07:30",
+        summary: "适合职场妈妈、二胎妈妈和时间碎片化的家庭。"
+      }
+    ];
+    const phonicsLevels = [
+      {
+        name: "Level 1",
+        title: "基础字素与短元音入门",
+        core: "每次只解锁一组核心字素：Set 1 → Set 2 → Set 3",
+        pathIntro: "Level 1：每次只解锁一组核心字素，再马上练习和解码。",
+        cards: [
+          {
+            type: "core",
+            mapLabel: "先学音素 s/a/t/p",
+            label: "Core Graphemes",
+            prompt: "先点每个字母听声音，再跟读。重点是看到字母先想到字母音。",
+            side: ["Listen first.", "Tap each sound.", "It's your turn!"],
+            groups: [
+              {
+                title: "Set 1",
+                caption: "今天只学：s / a / t / p",
+                items: [
+                  { text: "s", sound: "/s/", examples: "sat, sip, sun", speak: "s" },
+                  { text: "a", sound: "/æ/", examples: "sat, mat, cat", speak: "a" },
+                  { text: "t", sound: "/t/", examples: "tap, tin, cat", speak: "t" },
+                  { text: "p", sound: "/p/", examples: "pat, pin, map", speak: "p" }
+                ]
+              }
+            ]
+          },
+          {
+            type: "gpc",
+            mapLabel: "再做 GPC 拼词",
+            label: "GPC 拼词",
+            prompt: "先回忆刚学的单个音，再把缺少的字素补进单词里。",
+            side: ["Use the sounds you learned.", "Tap the missing sound.", "Nice work!"],
+            items: [
+              { word: "sat", blank: "_ a t", answer: "s", options: ["s", "p", "m"], phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐" },
+              { word: "tap", blank: "_ a p", answer: "t", options: ["t", "s", "p"], phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头" },
+              { word: "pat", blank: "_ a t", answer: "p", options: ["p", "s", "t"], phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍" }
+            ]
+          },
+          {
+            type: "word",
+            mapLabel: "最后做 Decoding",
+            label: "Word Decoding",
+            prompt: "先点每个声音，再把声音连起来读成一个词。",
+            side: ["Sound it out.", "Slide the sounds together.", "Read it out loud."],
+            items: [
+              { word: "sat", phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐下" },
+              { word: "tap", phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头" },
+              { word: "pat", phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍" }
+            ]
+          },
+          {
+            type: "core",
+            mapLabel: "先学音素 i/n/m/d",
+            label: "Core Graphemes",
+            prompt: "只解锁下一组 4 个核心字素，再回到练习和解码。",
+            side: ["New small set.", "Tap each sound.", "Four sounds only."],
+            groups: [
+              {
+                title: "Set 2",
+                caption: "今天只学：i / n / m / d",
+                items: [
+                  { text: "i", sound: "/ɪ/", examples: "sit, pin, dig", speak: "i" },
+                  { text: "n", sound: "/n/", examples: "nap, tin, man", speak: "n" },
+                  { text: "m", sound: "/m/", examples: "mat, map, man", speak: "m" },
+                  { text: "d", sound: "/d/", examples: "dig, dip, did", speak: "d" }
+                ]
+              }
+            ]
+          },
+          {
+            type: "gpc",
+            mapLabel: "再做 GPC 拼词",
+            label: "GPC 拼词",
+            prompt: "先把 Set 1 和 Set 2 学过的声音想起来，再补完整单词。",
+            side: ["Use the sounds you know.", "Find the missing sound.", "Small steps."],
+            items: [
+              { word: "pin", blank: "p _ n", answer: "i", options: ["i", "a", "t"], phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针" },
+              { word: "nap", blank: "_ a p", answer: "n", options: ["n", "m", "s"], phonemes: ["/n/", "/æ/", "/p/"], emoji: "😴", meaning: "小睡" },
+              { word: "map", blank: "_ a p", answer: "m", options: ["m", "n", "t"], phonemes: ["/m/", "/æ/", "/p/"], emoji: "🗺️", meaning: "地图" }
+            ]
+          },
+          {
+            type: "word",
+            mapLabel: "最后做 Decoding",
+            label: "Word Decoding",
+            prompt: "把 Set 1 和 Set 2 的声音合起来读。",
+            side: ["Sound it out.", "Blend slowly.", "Read it clearly."],
+            items: [
+              { word: "pin", phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针" },
+              { word: "mat", phonemes: ["/m/", "/æ/", "/t/"], emoji: "🧘", meaning: "垫子" },
+              { word: "did", phonemes: ["/d/", "/ɪ/", "/d/"], emoji: "✅", meaning: "做了" }
+            ]
+          },
+          {
+            type: "core",
+            mapLabel: "先学音素 g/o/c/k",
+            label: "Core Graphemes",
+            prompt: "进入第三组核心字素，仍然只学 4 个左右。",
+            side: ["Next small set.", "Tap each sound.", "Keep going."],
+            groups: [
+              {
+                title: "Set 3",
+                caption: "今天只学：g / o / c / k",
+                items: [
+                  { text: "g", sound: "/g/", examples: "gap, got, dig", speak: "g" },
+                  { text: "o", sound: "/ɒ/", examples: "got, cot, dog", speak: "o" },
+                  { text: "c", sound: "/k/", examples: "cat, cot, cap", speak: "c" },
+                  { text: "k", sound: "/k/", examples: "kit, kid", speak: "k" }
+                ]
+              }
+            ]
+          },
+          {
+            type: "gpc",
+            mapLabel: "再做 GPC 拼词",
+            label: "GPC 拼词",
+            prompt: "先回想第三组新声音，再把它们补进单词里。",
+            side: ["Can you complete it?", "Use the new sounds.", "Try one card."],
+            items: [
+              { word: "cat", blank: "_ a t", answer: "c", options: ["c", "k", "p"], phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫" },
+              { word: "cot", blank: "c _ t", answer: "o", options: ["o", "a", "i"], phonemes: ["/k/", "/ɒ/", "/t/"], emoji: "🛏️", meaning: "小床" },
+              { word: "dog", blank: "d _ g", answer: "o", options: ["o", "a", "i"], phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗" }
+            ]
+          },
+          {
+            type: "word",
+            mapLabel: "最后做 Decoding",
+            label: "Word Decoding",
+            prompt: "完成第三组 CVC 单词解码。",
+            side: ["Decode first.", "Blend the sounds.", "Read out loud."],
+            items: [
+              { word: "cat", phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫" },
+              { word: "dog", phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗" },
+              { word: "kit", phonemes: ["/k/", "/ɪ/", "/t/"], emoji: "🧰", meaning: "工具包" }
+            ]
+          }
+        ]
+      },
+      { name: "Level 2", title: "补全基础辅音与二合音", core: "ck, e, u, r · h, b, f, ll, ss", cards: [] },
+      { name: "Level 3", title: "低频辅音与更多二合音", core: "j, v, w, x, y, z · qu, ch, sh, th, ng", cards: [] },
+      { name: "Level 4", title: "元音组合与复杂字素", core: "ai, ee, igh, oa, oo, ar, or", cards: [] },
+      { name: "Level 5", title: "辅音连缀与混合拼读", core: "st, sp, cl, fl, bl, cr, tr", cards: [] },
+      { name: "Level 6", title: "词族与 Magic E", core: "-at, -op, -in · a_e, i_e, o_e, u_e", cards: [] },
+      { name: "Level 7", title: "多音字素与灵活解码", core: "c, g, y, ea, ow, ie, ou", cards: [] }
+    ];
+
+    const phonicsState = {
+      levelIndex: 0,
+      cardIndex: 0,
+      taskIndex: 0,
+      speed: 1,
+      font: "formal",
+      guide: true,
+      mode: "voiceText",
+      progressCardIndex: 0,
+      selectedAnswer: "",
+      completed: false
+    };
+
+    const PHONICS_PROGRESS_KEY = "foru_phonics_progress_v1";
+
+    let phonicsRecorder = null;
+    let phonicsStream = null;
+    let phonicsChunks = [];
+    let phonicsRecordingTimer = null;
+    let phonicsRecordingShouldAdvance = false;
+    let phonicsRecordingDiscarded = false;
+    let phonicsAudioUrl = "";
+    let phonicsDemoAudio = null;
+
+    function hasPhonicsProgress() {
+      return phonicsState.levelIndex > 0 || phonicsState.cardIndex > 0 || phonicsState.taskIndex > 0 || phonicsState.completed;
+    }
+
+    function savePhonicsProgress() {
+      try {
+        const level = currentPhonicsLevel();
+        const cardCount = level.cards?.length || 0;
+        if (!cardCount) return;
+        phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, phonicsState.cardIndex);
+        localStorage.setItem(PHONICS_PROGRESS_KEY, JSON.stringify({
+          levelIndex: phonicsState.levelIndex,
+          cardIndex: phonicsState.cardIndex,
+          taskIndex: phonicsState.taskIndex,
+          progressCardIndex: phonicsState.progressCardIndex,
+          completed: phonicsState.completed,
+          savedAt: new Date().toISOString()
+        }));
+      } catch (error) {
+        // 静态公开版不依赖本地存储；失败时仍可正常练习。
+      }
+    }
+
+    function loadPhonicsProgress() {
+      try {
+        const raw = localStorage.getItem(PHONICS_PROGRESS_KEY);
+        if (!raw) return;
+        const saved = JSON.parse(raw);
+        const levelIndex = Number(saved.levelIndex) || 0;
+        const level = phonicsLevels[levelIndex] || phonicsLevels[0];
+        const cardCount = level.cards?.length || 0;
+        if (!cardCount) return;
+        phonicsState.levelIndex = levelIndex;
+        phonicsState.cardIndex = Math.min(Math.max(Number(saved.cardIndex) || 0, 0), cardCount - 1);
+        phonicsState.taskIndex = Math.min(
+          Math.max(Number(saved.taskIndex) || 0, 0),
+          Math.max(phonicsTaskCount(level.cards[phonicsState.cardIndex]) - 1, 0)
+        );
+        phonicsState.progressCardIndex = Math.min(
+          Math.max(Number(saved.progressCardIndex) || phonicsState.cardIndex, phonicsState.cardIndex),
+          cardCount - 1
+        );
+        phonicsState.completed = Boolean(saved.completed);
+      } catch (error) {
+        localStorage.removeItem(PHONICS_PROGRESS_KEY);
+      }
+    }
+
+    function resetPhonicsProgress() {
+      if (phonicsRecorder && phonicsRecorder.state === "recording") stopPhonicsRecording(false, true);
+      try {
+        localStorage.removeItem(PHONICS_PROGRESS_KEY);
+      } catch (error) {
+        // 忽略本地存储清理失败。
+      }
+      phonicsState.levelIndex = 0;
+      phonicsState.cardIndex = 0;
+      phonicsState.taskIndex = 0;
+      phonicsState.progressCardIndex = 0;
+      phonicsState.selectedAnswer = "";
+      phonicsState.completed = false;
+      renderPhonicsLevels();
+      renderPhonicsMap();
+      renderPhonicsPractice();
+      setPhonicsStatus("已从第一小站重新开始。");
+    }
+
+    function openModal(modal) {
+      if (!modal) return;
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function closeModal(modal) {
+      if (!modal) return;
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+
+    function matchesBlogFilter(item, filter) {
+      return filter === "all" || item.type === filter || item.pillar === filter;
+    }
+
+    function latestBlogItemsByPillar() {
+      const seen = new Set();
+      return blogItems.filter((item) => {
+        if (seen.has(item.pillar)) return false;
+        seen.add(item.pillar);
+        return true;
+      });
+    }
+
+    function setBlogFilter(filter = "all") {
+      document.querySelectorAll("[data-blog-filter]").forEach((node) => {
+        node.classList.toggle("active", (node.dataset.blogFilter || "all") === filter);
+      });
+      renderBlogItems(filter);
+    }
+
+    function renderBlogItems(filter = "all") {
+      if (!blogGrid) return;
+      blogGrid.innerHTML = "";
+      const visibleItems = filter === "all"
+        ? latestBlogItemsByPillar()
+        : blogItems.filter((item) => matchesBlogFilter(item, filter));
+
+      if (!visibleItems.length) {
+        blogGrid.innerHTML = `<article class="planet-empty">这个栏目内容正在整理中，后续会从飞书同步更新。</article>`;
+        return;
+      }
+
+      visibleItems.forEach((item) => {
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = `blog-card blog-card-${item.type}`;
+        card.setAttribute("aria-label", `打开${item.title}`);
+
+        const cover = document.createElement("div");
+        cover.className = "blog-cover";
+        const image = document.createElement("img");
+        image.src = item.cover;
+        image.alt = item.title;
+        cover.appendChild(image);
+
+        const body = document.createElement("div");
+        body.className = "blog-body";
+        const type = document.createElement("span");
+        type.className = "blog-type";
+        type.textContent = blogTypeLabels[item.type] || item.type;
+        const title = document.createElement("h3");
+        title.textContent = item.title;
+        const excerpt = document.createElement("p");
+        excerpt.textContent = item.excerpt;
+        const meta = document.createElement("div");
+        meta.className = "blog-meta";
+        [item.pillarLabel, item.category, item.duration].filter(Boolean).forEach((text) => {
+          const pill = document.createElement("span");
+          pill.textContent = text;
+          meta.appendChild(pill);
+        });
+        body.append(type, title, excerpt, meta);
+        card.append(cover, body);
+        card.addEventListener("click", () => openBlogItem(item));
+        blogGrid.appendChild(card);
+      });
+    }
+
+    function renderBlogMedia(item) {
+      if (!blogModalMedia) return;
+      blogModalMedia.hidden = true;
+      blogModalMedia.innerHTML = "";
+
+      if (item.type === "video") {
+        blogModalMedia.hidden = false;
+        const label = document.createElement("p");
+        label.textContent = item.mediaUrl ? "视频内容" : "视频内容正在整理中，稍后上线。";
+        blogModalMedia.appendChild(label);
+        if (item.mediaUrl) {
+          const video = document.createElement("video");
+          video.src = item.mediaUrl;
+          video.controls = true;
+          blogModalMedia.appendChild(video);
+        }
+      }
+
+      if (item.type === "podcast") {
+        blogModalMedia.hidden = false;
+        const label = document.createElement("p");
+        label.textContent = item.mediaUrl ? "音频内容" : "音频内容正在整理中，稍后上线。";
+        blogModalMedia.appendChild(label);
+        if (item.mediaUrl) {
+          const audio = document.createElement("audio");
+          audio.src = item.mediaUrl;
+          audio.controls = true;
+          blogModalMedia.appendChild(audio);
+        }
+      }
+    }
+
+    function openBlogItem(item) {
+      if (!blogModal) return;
+      blogModalTitle.textContent = item.title;
+      blogModalExcerpt.textContent = item.excerpt;
+      blogModalMeta.innerHTML = "";
+      [item.pillarLabel, blogTypeLabels[item.type], item.category, item.duration].filter(Boolean).forEach((text) => {
+        const pill = document.createElement("span");
+        pill.textContent = text;
+        blogModalMeta.appendChild(pill);
+      });
+      blogModalCover.innerHTML = "";
+      const image = document.createElement("img");
+      image.src = item.cover;
+      image.alt = item.title;
+      blogModalCover.appendChild(image);
+      blogModalContent.innerHTML = "";
+      item.body.forEach((paragraph) => {
+        const p = document.createElement("p");
+        p.textContent = paragraph;
+        blogModalContent.appendChild(p);
+      });
+      renderBlogMedia(item);
+      openModal(blogModal);
+    }
+
+    function renderMomDirectory() {
+      if (!momDirectoryList) return;
+      momDirectoryList.innerHTML = "";
+      momDirectoryItems.forEach((item) => {
+        const row = document.createElement("article");
+        row.className = "mom-directory-item";
+        const title = document.createElement("strong");
+        title.textContent = item.title;
+        const host = document.createElement("span");
+        host.textContent = item.host;
+        const duration = document.createElement("span");
+        duration.textContent = item.duration;
+        const summary = document.createElement("p");
+        summary.textContent = item.summary;
+        row.append(title, host, duration, summary);
+        momDirectoryList.appendChild(row);
+      });
+    }
+
+    function openMomDirectory() {
+      renderMomDirectory();
+      openModal(momDirectoryModal);
+    }
+
+    function initBlog() {
+      setBlogFilter("all");
+      document.querySelectorAll("[data-blog-filter]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.blogFilter || "all";
+          setBlogFilter(filter);
+        });
+      });
+      document.querySelectorAll("[data-open-mom-directory]").forEach((button) => {
+        button.addEventListener("click", openMomDirectory);
+      });
+    }
+
+    function currentPhonicsLevel() {
+      return phonicsLevels[phonicsState.levelIndex] || phonicsLevels[0];
+    }
+
+    function currentPhonicsCard() {
+      const level = currentPhonicsLevel();
+      return level.cards?.[phonicsState.cardIndex] || null;
+    }
+
+    function currentPhonicsTask() {
+      const card = currentPhonicsCard();
+      if (!card) return null;
+      if (card.type === "core") return card.groups?.[phonicsState.taskIndex] || card.groups?.[0] || null;
+      return card.items?.[phonicsState.taskIndex] || card.items?.[0] || null;
+    }
+
+    function phonicsTaskCount(card) {
+      if (!card) return 0;
+      if (card.type === "core") return Math.max(card.groups?.length || 0, 1);
+      return Math.max(card.items?.length || 0, 1);
+    }
+
+    function phonicsLevelTaskTotal(level = currentPhonicsLevel()) {
+      return (level.cards || []).reduce((total, card) => total + phonicsTaskCount(card), 0);
+    }
+
+    function phonicsCurrentStep() {
+      const level = currentPhonicsLevel();
+      const total = phonicsLevelTaskTotal(level);
+      if (!total) return 0;
+      if (phonicsState.completed) return total;
+      const before = level.cards
+        .slice(0, phonicsState.cardIndex)
+        .reduce((sum, card) => sum + phonicsTaskCount(card), 0);
+      return Math.min(before + phonicsState.taskIndex + 1, total);
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function getPhonicsTaskLabel(card, task) {
+      if (!card) return "练习待开放";
+      if (card.type === "core") return `${task?.caption || "核心字素小站"} · ${(task?.items || []).map((item) => item.text).join(" / ")}`;
+      if (card.type === "gpc") return `${task?.blank || ""} → ${task?.word || ""}`;
+      if (card.type === "word") return task?.word || "单词解码";
+      if (card.type === "sentence") return task?.sentence || "短句解码";
+      return card.label || card.mapLabel || "练习";
+    }
+
+    function getPhonicsSidePrompts(card, task) {
+      if (!phonicsState.guide || !card) return [];
+      const index = phonicsState.taskIndex % 3;
+      const word = task?.word || task?.sentence || "";
+      const prompts = {
+        core: [
+          ["Listen first.", "Tap each grapheme.", "Keep the sound short."],
+          ["Look at the letter.", "Say the sound.", "Try it one more time."],
+          ["Small steps.", "Four sounds only.", "Now your turn."]
+        ],
+        gpc: [
+          [`Look at ${word}.`, "Which sound is missing?", "Tap the correct card."],
+          [`Listen inside: ${word}.`, "Find the first sound.", "Place it in the blank."],
+          [`You know this one.`, "Say the sounds slowly.", "Choose and read."]
+        ],
+        word: [
+          [`Sound out ${word}.`, "Touch each sound.", "Blend and read."],
+          [`Start slowly.`, "One sound at a time.", `Now read: ${word}.`],
+          [`Eyes on the word.`, "Say each sound.", "Slide them together."]
+        ],
+        sentence: [
+          ["Read the focus words.", "Now read the sentence.", "Use a clear voice."],
+          ["Look at the picture.", "Point to each word.", "Read the whole line."],
+          ["No rush.", "Decode first.", "Then read smoothly."]
+        ]
+      };
+      return prompts[card.type]?.[index] || card.side || [];
+    }
+
+    function setPhonicsStatus(message) {
+      const status = document.querySelector("#phonicsStatus");
+      if (status) status.textContent = message;
+    }
+
+    function resetPhonicsPlayback() {
+      const playback = document.querySelector("#phonicsPlayback");
+      if (phonicsDemoAudio) {
+        phonicsDemoAudio.pause();
+        phonicsDemoAudio = null;
+      }
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+      if (phonicsAudioUrl) {
+        URL.revokeObjectURL(phonicsAudioUrl);
+        phonicsAudioUrl = "";
+      }
+      if (playback) {
+        playback.pause();
+        playback.removeAttribute("src");
+        playback.hidden = true;
+      }
+    }
+
+    function getPhonicsSpokenText(card, task) {
+      if (!card || !task) return "";
+      if (card.type === "word") return task.word || "";
+      if (card.type === "sentence") return task.sentence || "";
+      return "";
+    }
+
+    function speakPhonicsText(text, statusLabel = text) {
+      if (!text || !("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") return false;
+      if (phonicsDemoAudio) {
+        phonicsDemoAudio.pause();
+        phonicsDemoAudio = null;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-GB";
+      utterance.rate = phonicsState.speed;
+      utterance.pitch = 1;
+      utterance.onerror = () => setPhonicsStatus("浏览器临时示范音暂时无法播放，请先按提示跟读。");
+      window.speechSynthesis.speak(utterance);
+      setPhonicsStatus(`正在播放浏览器临时英音示范：${statusLabel}。正式 AI 音频后续可替换。`);
+      return true;
+    }
+
+    function stopPhonicsStream() {
+      if (!phonicsStream) return;
+      phonicsStream.getTracks().forEach((track) => track.stop());
+      phonicsStream = null;
+    }
+
+    function stopPhonicsRecording(shouldAdvance = true, discard = false) {
+      phonicsRecordingShouldAdvance = shouldAdvance;
+      phonicsRecordingDiscarded = discard;
+      window.clearTimeout(phonicsRecordingTimer);
+      phonicsRecordingTimer = null;
+      if (phonicsRecorder && phonicsRecorder.state === "recording") {
+        phonicsRecorder.stop();
+        return;
+      }
+      phonicsRecorder = null;
+      phonicsRecordingShouldAdvance = false;
+      phonicsRecordingDiscarded = false;
+      stopPhonicsStream();
+    }
+
+    function finishPhonicsRecording() {
+      const recordButton = document.querySelector("#phonicsRecordButton");
+      const playback = document.querySelector("#phonicsPlayback");
+      const mimeType = phonicsRecorder?.mimeType || "audio/webm";
+      const shouldAdvance = phonicsRecordingShouldAdvance;
+      const discarded = phonicsRecordingDiscarded;
+      const blob = new Blob(phonicsChunks, { type: mimeType });
+      phonicsChunks = [];
+      phonicsRecorder = null;
+      phonicsRecordingShouldAdvance = false;
+      phonicsRecordingDiscarded = false;
+      stopPhonicsStream();
+
+      if (discarded) return;
+
+      if (recordButton) recordButton.textContent = "已完成跟读，进入下一步";
+      if (blob.size && playback) {
+        resetPhonicsPlayback();
+        phonicsAudioUrl = URL.createObjectURL(blob);
+        playback.src = phonicsAudioUrl;
+        playback.hidden = false;
+      }
+      setPhonicsStatus("录音已完成。你可以回放听一遍，也可以继续下一步。");
+      if (shouldAdvance) window.setTimeout(nextPhonicsCard, 900);
+    }
+
+    async function togglePhonicsRecording() {
+      const recordButton = document.querySelector("#phonicsRecordButton");
+      if (phonicsRecorder && phonicsRecorder.state === "recording") {
+        stopPhonicsRecording(true);
+        return;
+      }
+
+      resetPhonicsPlayback();
+      if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+        if (recordButton) recordButton.textContent = "当前浏览器不支持录音，可下一步";
+        setPhonicsStatus("公开版不强制录音。当前预览环境不支持录音，点击右侧箭头可以继续；如需录音请用 localhost 或 https 预览。");
+        return;
+      }
+
+      try {
+        if (recordButton) recordButton.textContent = "正在请求麦克风";
+        phonicsStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        phonicsChunks = [];
+        phonicsRecorder = new MediaRecorder(phonicsStream);
+        phonicsRecordingShouldAdvance = true;
+        phonicsRecordingDiscarded = false;
+        phonicsRecorder.addEventListener("dataavailable", (event) => {
+          if (event.data && event.data.size > 0) phonicsChunks.push(event.data);
+        });
+        phonicsRecorder.addEventListener("stop", finishPhonicsRecording, { once: true });
+        phonicsRecorder.start();
+        if (recordButton) recordButton.textContent = "录音中，再点结束";
+        setPhonicsStatus("正在录音：读完后可再次点击结束，或等待 3 秒自动完成。");
+        phonicsRecordingTimer = window.setTimeout(() => stopPhonicsRecording(true), 3000);
+      } catch (error) {
+        phonicsRecorder = null;
+        phonicsChunks = [];
+        stopPhonicsStream();
+        if (recordButton) recordButton.textContent = "麦克风未开启，可下一步";
+        setPhonicsStatus("没有获得麦克风权限，因此无法保存本次跟读录音。公开版仍可点击箭头继续练习。");
+      }
+    }
+
+    function renderPhonicsLevels() {
+      const list = document.querySelector("#phonicsLevelList");
+      if (!list) return;
+      list.innerHTML = "";
+      phonicsLevels.forEach((level, index) => {
+        const isOpen = (level.cards || []).length > 0;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `phonics-level-button ${index === phonicsState.levelIndex ? "active" : ""}`;
+        button.innerHTML = `<strong>${level.name}${isOpen ? "" : " · 规划中"}</strong><span>${level.title}</span>`;
+        button.addEventListener("click", () => {
+          phonicsState.levelIndex = index;
+          phonicsState.cardIndex = 0;
+          phonicsState.taskIndex = 0;
+          phonicsState.selectedAnswer = "";
+          phonicsState.progressCardIndex = 0;
+          phonicsState.completed = false;
+          savePhonicsProgress();
+          renderPhonicsLevels();
+          renderPhonicsMap();
+          renderPhonicsPractice();
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function renderPhonicsMap() {
+      const level = currentPhonicsLevel();
+      const name = document.querySelector("#phonicsLevelName");
+      const title = document.querySelector("#phonicsLevelTitle");
+      const core = document.querySelector("#phonicsCoreLabel");
+      const summary = document.querySelector("#phonicsStartSummary");
+      if (!name || !title || !core || !summary) return;
+      const activeCard = currentPhonicsCard();
+      const hasCards = (level.cards || []).length > 0;
+      const startButton = document.querySelector(".phonics-start-button");
+      const resetButton = document.querySelector("#phonicsResetButton");
+      name.textContent = level.name;
+      title.textContent = level.title;
+      core.textContent = level.pathIntro || `核心字素 ${level.core}`;
+      if (hasCards && phonicsState.completed) {
+        summary.textContent = `${level.name} 已完成一轮。可以从头复习，也可以点击任意小站直接练。`;
+      } else if (hasCards && hasPhonicsProgress()) {
+        summary.textContent = `上次学到：${level.name} · ${activeCard.mapLabel} · ${getPhonicsTaskLabel(activeCard, currentPhonicsTask())}`;
+      } else {
+        summary.textContent = hasCards
+          ? `${level.name} · 建议从 Set 1 开始；老学员也可以直接点击任意小站复习。`
+          : `${level.name} 内容正在整理，先跑通 Level 1。`;
+      }
+      if (startButton) {
+        startButton.disabled = !hasCards;
+        startButton.textContent = hasCards && hasPhonicsProgress() ? "继续练习" : (hasCards ? "开始练习" : "即将开放");
+      }
+      if (resetButton) {
+        resetButton.hidden = !hasCards || !hasPhonicsProgress();
+      }
+      document.querySelectorAll("[data-phonics-card]").forEach((button) => {
+        const cardIndex = Number(button.dataset.phonicsCard);
+        const card = level.cards[cardIndex];
+        const isFuture = Boolean(card) && cardIndex > phonicsState.progressCardIndex && cardIndex !== phonicsState.cardIndex;
+        button.hidden = !card;
+        button.disabled = !card;
+        button.classList.toggle("active", cardIndex === phonicsState.cardIndex);
+        button.classList.toggle("future", isFuture);
+        button.classList.toggle("completed", Boolean(card) && cardIndex < phonicsState.progressCardIndex);
+        const label = button.querySelector("[data-step-label]");
+        if (card && label) label.textContent = card.mapLabel;
+        if (card && !label) button.textContent = card.mapLabel;
+      });
+    }
+
+    function renderCoreActivity(card, group) {
+      const groups = card.groups || [];
+      const activeGroup = group || groups[0] || { title: "Core", caption: "核心字素", items: [] };
+      const cards = (activeGroup.items || []).map((item) => `
+        <button class="phonics-sound-card" type="button" data-phonics-speak="${escapeHtml(item.text)}" data-phonics-sound="${escapeHtml(item.sound)}" data-phonics-label="${escapeHtml(item.examples)}">
+          <strong>${escapeHtml(item.text)}</strong>
+          <span>${escapeHtml(item.sound)}</span>
+          <span>${escapeHtml(item.examples)}</span>
+        </button>
+      `).join("");
+      return `
+        <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${groups.length || 1}</span>
+        <p class="phonics-stage-desc">${escapeHtml(card.prompt)}</p>
+        <div class="phonics-core-layout">
+          <div class="phonics-core-main">
+            <p class="phonics-mini-meaning">${escapeHtml(activeGroup.caption)}</p>
+            <div class="phonics-grapheme-grid">${cards}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderGpcActivity(card, task) {
+      const selected = phonicsState.selectedAnswer;
+      const phonemes = (task.phonemes || []).map((phoneme) => `
+        <span class="active">${escapeHtml(phoneme)}</span>
+      `).join("");
+      const wordParts = String(task.blank || "").split(" ").map((part) => {
+        if (part === "_") {
+          return `
+            <div class="phonics-drop-slot ${selected ? "filled" : ""}" aria-label="缺失字素">
+              <strong>${selected ? escapeHtml(selected) : "_"}</strong>
+              <span>缺的音</span>
+            </div>
+          `;
+        }
+        return `
+          <div class="phonics-drop-slot filled" aria-label="${escapeHtml(part)}">
+            <strong>${escapeHtml(part)}</strong>
+            <span>已给</span>
+          </div>
+        `;
+      }).join("");
+      const options = (task.options || []).map((option) => `
+        <button class="phonics-option-card ${selected === option ? "selected" : ""}" type="button" data-gpc-option="${escapeHtml(option)}">
+          <strong>${escapeHtml(option)}</strong>
+          <span>点选</span>
+        </button>
+      `).join("");
+      const isCorrect = selected && selected === task.answer;
+      const result = selected
+        ? `<p class="phonics-result ${isCorrect ? "" : "error"}">${isCorrect ? `正确：${escapeHtml(task.word)} 的缺失字素是 ${escapeHtml(task.answer)}。` : "再试一次，先慢慢说出这个词的每个声音。"}</p>`
+        : `<p class="phonics-result">选择一个字素，补完整下面的词。</p>`;
+      return `
+        <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${card.items.length}</span>
+        <div class="phonics-image-card" aria-hidden="true"><span>${escapeHtml(task.emoji || "🔤")}</span></div>
+        <p class="phonics-mini-meaning">${escapeHtml(task.meaning || "")}</p>
+        <p class="phonics-stage-desc">${escapeHtml(card.prompt)}</p>
+        <div class="phonics-phoneme-row">${phonemes}</div>
+        <div class="phonics-gpc-board">${wordParts}</div>
+        <div class="phonics-option-row">${options}</div>
+        ${result}
+      `;
+    }
+
+    function renderWordActivity(card, task) {
+      const phonemes = (task.phonemes || []).map((phoneme) => `
+        <span class="active">${escapeHtml(phoneme)}</span>
+      `).join("");
+      return `
+        <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${card.items.length}</span>
+        <div class="phonics-image-card" aria-hidden="true"><span>${escapeHtml(task.emoji || "📘")}</span></div>
+        <div class="phonics-letter word">
+          ${escapeHtml(task.word)}
+          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.word)}" aria-label="播放${escapeHtml(task.word)}示范">▶</button>
+        </div>
+        <div class="phonics-decode-steps" aria-label="解码三步">
+          <span><strong>1 点声音</strong>逐个说出每个音</span>
+          <span><strong>2 合起来</strong>把声音慢慢滑在一起</span>
+          <span><strong>3 大声读</strong>读成完整单词</span>
+        </div>
+        <div class="phonics-phoneme-row">${phonemes}</div>
+        <p class="phonics-mini-meaning">${escapeHtml(task.meaning || "")}</p>
+        <p class="phonics-stage-desc">${escapeHtml(card.prompt)}</p>
+      `;
+    }
+
+    function renderSentenceActivity(card, task) {
+      const focus = (task.focus || []).map((word) => `<span>${escapeHtml(word)}</span>`).join("");
+      return `
+        <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${card.items.length}</span>
+        <div class="phonics-sentence-picture" aria-hidden="true"><span>${escapeHtml(task.emoji || "📖")}</span></div>
+        <div class="phonics-letter sentence">
+          ${escapeHtml(task.sentence)}
+          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.sentence)}" aria-label="播放短句示范">▶</button>
+        </div>
+        <div class="phonics-focus-row">${focus}</div>
+        <p class="phonics-mini-meaning">${escapeHtml(task.meaning || "")}</p>
+        <p class="phonics-stage-desc">${escapeHtml(card.prompt)}</p>
+      `;
+    }
+
+    function renderPhonicsComplete() {
+      return `
+        <div class="phonics-complete-card">
+          <strong>Level 1</strong>
+          <h2>已经跑完一轮</h2>
+          <p class="phonics-stage-desc">孩子已经按“小组字素 → GPC → Decoding”的节奏跑完一轮。点击右侧箭头可以从 Set 1 再练一轮。</p>
+        </div>
+      `;
+    }
+
+    function bindPhonicsActivityHandlers(card, task) {
+      const stage = document.querySelector("#phonicsActivityStage");
+      if (!stage) return;
+      stage.querySelectorAll("[data-phonics-speak]").forEach((button) => {
+        button.addEventListener("click", () => {
+          stage.querySelectorAll("[data-phonics-speak]").forEach((node) => node.classList.remove("active"));
+          button.classList.add("active");
+          const text = button.dataset.phonicsSpeak || "";
+          const sound = button.dataset.phonicsSound || "";
+          const label = button.dataset.phonicsLabel || "";
+          if (phonicsState.mode === "textOnly") {
+            setPhonicsStatus(`当前是只看文字模式：${text} ${sound} ${label}`.trim());
+            return;
+          }
+          if (sound) {
+            setPhonicsStatus(`单音点读音频已预留：${text} ${sound}。这里不会用字母名替代字母音，避免给孩子错误示范。${label ? `示例：${label}` : ""}`);
+            return;
+          }
+          if (speakPhonicsText(text, text)) return;
+          setPhonicsStatus(`示范音频接口已预留：${text}。当前浏览器不能播放临时示范音，请先按提示跟读。`);
+        });
+      });
+      stage.querySelectorAll("[data-gpc-option]").forEach((button) => {
+        button.addEventListener("click", () => {
+          phonicsState.selectedAnswer = button.dataset.gpcOption || "";
+          renderPhonicsPractice();
+          const updatedTask = currentPhonicsTask();
+          const selected = phonicsState.selectedAnswer;
+          if (selected === updatedTask?.answer) {
+            setPhonicsStatus(`答对了：${updatedTask.word}。可以录一遍，也可以点箭头进入下一题。`);
+          } else {
+            setPhonicsStatus("还不对。先慢慢读目标词，再找缺失的声音。");
+          }
+        });
+      });
+    }
+
+    function renderPhonicsPractice() {
+      if (!phonicsModal) return;
+      const level = currentPhonicsLevel();
+      const card = currentPhonicsCard();
+      const task = currentPhonicsTask();
+      const stage = document.querySelector("#phonicsActivityStage");
+      const progress = document.querySelector("#phonicsProgress");
+      const recordButton = document.querySelector("#phonicsRecordButton");
+      const playButton = document.querySelector("#phonicsPlayButton");
+      const nextButton = document.querySelector("#phonicsNextButton");
+      const side = document.querySelector("#phonicsSidePrompts");
+      if (!stage || !progress || !recordButton || !playButton || !nextButton || !side) return;
+
+      phonicsModal.classList.toggle("rounded", phonicsState.font === "rounded");
+      resetPhonicsPlayback();
+
+      const total = phonicsLevelTaskTotal(level);
+      progress.style.width = `${total ? (phonicsCurrentStep() / total) * 100 : 0}%`;
+      recordButton.textContent = "点击录音";
+      recordButton.disabled = false;
+      playButton.disabled = false;
+      playButton.textContent = card?.type === "core" || card?.type === "gpc" ? "听提示" : "听示范";
+      nextButton.disabled = false;
+      nextButton.textContent = "→";
+
+      if (phonicsState.completed) {
+        stage.innerHTML = renderPhonicsComplete();
+        progress.style.width = "100%";
+        side.innerHTML = phonicsState.guide ? ["Great work!", "Level 1 complete.", "Practice again?"].map((item) => `<span>${item}</span>`).join("") : "";
+        recordButton.disabled = true;
+        playButton.disabled = true;
+        setPhonicsStatus("Level 1 已完成。点击右侧箭头可重新开始。");
+        renderPhonicsMap();
+        return;
+      }
+
+      if (!card || !total) {
+        stage.innerHTML = `
+          <div class="phonics-complete-card">
+            <strong>${escapeHtml(level.name)}</strong>
+            <h2>内容正在整理</h2>
+            <p class="phonics-stage-desc">后续 Level 会继续按核心字素、GPC、单词解码和短句解码补齐。当前请先查看 Level 1 的完整闭环。</p>
+          </div>
+        `;
+        side.innerHTML = "";
+        recordButton.disabled = true;
+        playButton.disabled = true;
+        nextButton.disabled = true;
+        setPhonicsStatus("这个 Level 暂未开放，先跑通 Level 1。");
+        return;
+      }
+
+      const renderers = {
+        core: renderCoreActivity,
+        gpc: renderGpcActivity,
+        word: renderWordActivity,
+        sentence: renderSentenceActivity
+      };
+      stage.innerHTML = renderers[card.type]?.(card, task) || `<p class="phonics-stage-desc">练习内容待补充。</p>`;
+      const prompts = getPhonicsSidePrompts(card, task);
+      side.innerHTML = prompts.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+      bindPhonicsActivityHandlers(card, task);
+
+      const step = phonicsCurrentStep();
+      setPhonicsStatus(`Level 1 第 ${step}/${total} 步：${card.mapLabel}。先看提示，再录一遍自己的声音。`);
+      renderPhonicsMap();
+    }
+
+    function setPhonicsCard(cardIndex) {
+      if (phonicsRecorder && phonicsRecorder.state === "recording") stopPhonicsRecording(false, true);
+      const level = currentPhonicsLevel();
+      if (!level.cards?.[cardIndex]) return;
+      phonicsState.cardIndex = cardIndex;
+      phonicsState.taskIndex = 0;
+      phonicsState.selectedAnswer = "";
+      phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, cardIndex);
+      phonicsState.completed = false;
+      savePhonicsProgress();
+      renderPhonicsMap();
+      renderPhonicsPractice();
+    }
+
+    function nextPhonicsCard() {
+      if (phonicsRecorder && phonicsRecorder.state === "recording") stopPhonicsRecording(false, true);
+      const level = currentPhonicsLevel();
+      const card = currentPhonicsCard();
+      if (phonicsState.completed) {
+        phonicsState.cardIndex = 0;
+        phonicsState.taskIndex = 0;
+        phonicsState.selectedAnswer = "";
+        phonicsState.progressCardIndex = 0;
+        phonicsState.completed = false;
+        savePhonicsProgress();
+        renderPhonicsMap();
+        renderPhonicsPractice();
+        return;
+      }
+      if (!card) return;
+      if (phonicsState.taskIndex + 1 < phonicsTaskCount(card)) {
+        phonicsState.taskIndex += 1;
+        phonicsState.selectedAnswer = "";
+        savePhonicsProgress();
+        renderPhonicsMap();
+        renderPhonicsPractice();
+        return;
+      }
+      if (phonicsState.cardIndex + 1 < (level.cards || []).length) {
+        phonicsState.cardIndex += 1;
+        phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, phonicsState.cardIndex);
+        phonicsState.taskIndex = 0;
+        phonicsState.selectedAnswer = "";
+        savePhonicsProgress();
+        renderPhonicsMap();
+        renderPhonicsPractice();
+        return;
+      }
+      phonicsState.completed = true;
+      phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, (level.cards || []).length - 1);
+      savePhonicsProgress();
+      renderPhonicsPractice();
+    }
+
+    function openPhonicsPractice() {
+      renderPhonicsPractice();
+      phonicsModal.classList.add("active");
+      phonicsModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function closePhonicsPractice() {
+      if (!phonicsModal) return;
+      phonicsModal.classList.remove("active");
+      phonicsModal.setAttribute("aria-hidden", "true");
+      phonicsSettingsPanel.classList.remove("open");
+      stopPhonicsRecording(false, true);
+      resetPhonicsPlayback();
+      document.body.classList.remove("modal-open");
+    }
+
+    function playPhonicsCard() {
+      const card = currentPhonicsCard();
+      const task = currentPhonicsTask();
+      const audio = task?.audio || card?.audio;
+      if (phonicsState.completed) {
+        setPhonicsStatus("Level 1 已完成。点击箭头可以再练一轮。");
+        return;
+      }
+      if (!card) {
+        setPhonicsStatus("这个 Level 的示范音频和练习内容还在整理中。");
+        return;
+      }
+      if (!audio) {
+        const label = getPhonicsTaskLabel(card, task);
+        const spokenText = getPhonicsSpokenText(card, task);
+        if (spokenText && speakPhonicsText(spokenText, label)) return;
+        setPhonicsStatus(`单音点读音频已预留：${label}。当前先看音标和示例跟读，后续接入正式 AI 单音。`);
+        return;
+      }
+      resetPhonicsPlayback();
+      phonicsDemoAudio = new Audio(audio);
+      phonicsDemoAudio.playbackRate = phonicsState.speed;
+      phonicsDemoAudio.play().then(() => {
+        setPhonicsStatus("正在播放示范音频。");
+      }).catch(() => {
+        setPhonicsStatus("示范音频暂时无法播放，请先按提示跟读。");
+      });
+    }
+
+    function initPhonicsPractice() {
+      if (!phonicsModal) return;
+      loadPhonicsProgress();
+      renderPhonicsLevels();
+      renderPhonicsMap();
+      renderPhonicsPractice();
+      document.querySelectorAll("[data-phonics-card]").forEach((button) => {
+        button.addEventListener("click", () => setPhonicsCard(Number(button.dataset.phonicsCard)));
+      });
+      document.querySelectorAll("[data-open-phonics]").forEach((button) => {
+        button.addEventListener("click", openPhonicsPractice);
+      });
+      document.querySelector("#phonicsPlayButton")?.addEventListener("click", playPhonicsCard);
+      document.querySelector("#phonicsRecordButton")?.addEventListener("click", togglePhonicsRecording);
+      document.querySelector("#phonicsNextButton")?.addEventListener("click", nextPhonicsCard);
+      document.querySelector("#phonicsResetButton")?.addEventListener("click", resetPhonicsProgress);
+      document.querySelectorAll("[data-close-phonics]").forEach((button) => button.addEventListener("click", closePhonicsPractice));
+      document.querySelector("#phonicsSettingsButton")?.addEventListener("click", () => phonicsSettingsPanel.classList.add("open"));
+      document.querySelector("#phonicsSettingsClose")?.addEventListener("click", () => phonicsSettingsPanel.classList.remove("open"));
+      document.querySelectorAll("[data-phonics-font]").forEach((button) => {
+        button.addEventListener("click", () => {
+          phonicsState.font = button.dataset.phonicsFont;
+          document.querySelectorAll("[data-phonics-font]").forEach((node) => node.classList.toggle("active", node === button));
+          renderPhonicsPractice();
+        });
+      });
+      document.querySelectorAll("[data-phonics-speed]").forEach((button) => {
+        button.addEventListener("click", () => {
+          phonicsState.speed = Number(button.dataset.phonicsSpeed);
+          document.querySelectorAll("[data-phonics-speed]").forEach((node) => node.classList.toggle("active", node === button));
+        });
+      });
+      document.querySelectorAll("[data-phonics-mode]").forEach((button) => {
+        button.addEventListener("click", () => {
+          phonicsState.mode = button.dataset.phonicsMode;
+          document.querySelectorAll("[data-phonics-mode]").forEach((node) => node.classList.toggle("active", node === button));
+        });
+      });
+      document.querySelector("#phonicsGuideSwitch")?.addEventListener("change", (event) => {
+        phonicsState.guide = event.target.checked;
+        renderPhonicsPractice();
+      });
+    }
+
+    function openStudentCard(student) {
+      studentTitle.textContent = `${student.city} · ${student.name}`;
+      studentImage.textContent = student.emoji || "🌟";
+      studentStory.textContent = student.intro || "成长简介待补充。";
+      studentLinkButton.onclick = () => {
+        if (!student.link || student.link === "#") return;
+        window.open(student.link, "_blank", "noopener");
+      };
+      studentLinkButton.disabled = !student.link || student.link === "#";
+      studentLinkButton.textContent = studentLinkButton.disabled ? "完整成长记录链接待补充" : "查看完整成长记录";
+      openModal(studentModal);
+    }
+
+    function renderStudents(students) {
+      studentDots.innerHTML = "";
+      studentList.innerHTML = "";
+
+      if (!Array.isArray(students) || students.length === 0) {
+        studentList.innerHTML = `<div class="planet-empty">成长记录数据待补充。请在同目录的 students.json 中维护城市、名称、简介和链接。</div>`;
+        return;
+      }
+
+      students.forEach((student) => {
+        if (!student.city || !student.name || typeof student.x !== "number" || typeof student.y !== "number") return;
+
+        const dot = document.createElement("button");
+        dot.className = `city-dot ${student.labelSide === "left" ? "label-left" : ""}`;
+        dot.type = "button";
+        dot.style.left = `${student.x}%`;
+        dot.style.top = `${student.y}%`;
+        dot.dataset.city = student.city;
+        dot.setAttribute("aria-label", `查看${student.city}${student.name}成长简介`);
+        dot.addEventListener("click", () => openStudentCard(student));
+        studentDots.appendChild(dot);
+
+        const card = document.createElement("button");
+        card.className = "planet-card";
+        card.type = "button";
+        const title = document.createElement("h3");
+        title.textContent = `${student.city} · ${student.name}`;
+        const intro = document.createElement("p");
+        intro.textContent = student.intro || "成长简介待补充。";
+        card.append(title, intro);
+        card.addEventListener("click", () => openStudentCard(student));
+        studentList.appendChild(card);
+      });
+
+      if (!studentDots.children.length) {
+        studentList.innerHTML = `<div class="planet-empty">students.json 已读取，但还没有可显示的光点。请确认每条数据都包含 city、name、intro、link、x、y 字段。</div>`;
+      }
+    }
+
+    async function loadStudents() {
+      try {
+        const response = await fetch("students.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("students.json not found");
+        const students = await response.json();
+        renderStudents(students);
+      } catch (error) {
+        studentDots.innerHTML = "";
+        studentList.innerHTML = `<div class="planet-empty">未能读取 students.json。请确认文件与 index.html 在同一目录，并保持 JSON 格式正确。</div>`;
+      }
+    }
+
+    navButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      navButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        navButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.querySelectorAll(".nav-links button").forEach((button) => {
+      button.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        navButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.querySelectorAll("[data-qr]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const label = button.dataset.qr || "二维码";
+        qrTitle.textContent = button.dataset.title || "扫码添加";
+        qrDesc.textContent = `${label}：扫码添加 JoJo 老师，备注“官网”。`;
+        qrBox.innerHTML = '<img src="public/wechat-qr.jpg" alt="JoJo老师微信二维码" class="qr-image" />';
+        openModal(qrModal);
+      });
+    });
+
+    initBlog();
+    initPhonicsPractice();
+    loadStudents();
+
+    document.querySelectorAll("[data-footer-link]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const url = button.dataset.url;
+        if (url && url !== "#") {
+          window.open(url, "_blank", "noopener");
+        }
+      });
+    });
+
+    document.querySelectorAll("[data-close]").forEach((button) => {
+      button.addEventListener("click", () => {
+        closeModal(qrModal);
+        closeModal(studentModal);
+        closeModal(blogModal);
+        closeModal(momDirectoryModal);
+        closePhonicsPractice();
+      });
+    });
+
+    document.querySelectorAll(".modal").forEach((modal) => {
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal(modal);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal(qrModal);
+        closeModal(studentModal);
+        closeModal(blogModal);
+        closeModal(momDirectoryModal);
+        closePhonicsPractice();
+      }
+    });
+  </script>
+</body>
+</html>
