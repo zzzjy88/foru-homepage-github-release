@@ -8,9 +8,9 @@
     name="description"
     content="ForU伴学英语启蒙品牌官网，提供两年英语启蒙路径、课程体系、妈妈心力成长、启蒙陪跑内容库与真实成长故事。"
   />
-  <link rel="icon" type="image/png" href="public/favicon.png?v=20260729" />
-  <link rel="shortcut icon" type="image/png" href="public/favicon.png?v=20260729" />
-  <link rel="apple-touch-icon" href="public/favicon.png?v=20260729" />
+  <link rel="icon" type="image/png" href="public/favicon.png?v=20260729-for" />
+  <link rel="shortcut icon" type="image/png" href="public/favicon.png?v=20260729-for" />
+  <link rel="apple-touch-icon" href="public/favicon.png?v=20260729-for" />
   <style>
     :root {
       --cream: #fffbf0;
@@ -1689,7 +1689,7 @@
 
     .phonics-flow {
       position: relative;
-      min-height: 720px;
+      min-height: 1060px;
       margin: 20px 0 18px;
       overflow: hidden;
       border-radius: 28px;
@@ -1714,7 +1714,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      width: min(330px, 66%);
+      width: min(330px, 58%);
       padding: 0;
       color: #273043;
       background: transparent;
@@ -1783,9 +1783,9 @@
 
     .phonics-flow-index {
       position: relative;
-      flex: 0 0 82px;
-      width: 82px;
-      height: 50px;
+      flex: 0 0 74px;
+      width: 74px;
+      height: 46px;
       display: block;
       border-radius: 50%;
       color: transparent;
@@ -1851,7 +1851,7 @@
     .phonics-flow-step strong {
       display: block;
       color: #111827;
-      font-size: 1.12rem;
+      font-size: 1.04rem;
       font-weight: 900;
     }
 
@@ -2078,10 +2078,18 @@
     .phonics-option-card:hover,
     .phonics-sound-card.active,
     .phonics-option-card.selected,
-    .phonics-drop-slot.filled {
+    .phonics-drop-slot.filled,
+    .phonics-drop-slot.drag-over {
       border-color: rgba(17, 166, 109, 0.42);
       background: #f1fbf4;
       transform: translateY(-2px);
+    }
+
+    .phonics-sound-card .sound-play-label {
+      color: #0c9465;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
 
     .phonics-phoneme-row {
@@ -2145,6 +2153,33 @@
       font-size: 1.05rem;
     }
 
+    .phonics-decode-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 14px auto 18px;
+    }
+
+    .phonics-decode-button,
+    .phonics-check {
+      border: 0;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #0c9465;
+      background: #effaf2;
+      font: inherit;
+      font-weight: 900;
+    }
+
+    .phonics-decode-button.active,
+    .phonics-check {
+      color: #fff;
+      background: linear-gradient(135deg, #11a66d, #21bf86);
+      box-shadow: 0 12px 24px rgba(17, 166, 109, 0.18);
+    }
+
     .phonics-gpc-board {
       display: grid;
       grid-template-columns: repeat(3, minmax(80px, 112px));
@@ -2158,6 +2193,37 @@
       place-items: center;
       border-style: dashed;
       color: #b0b7c1;
+    }
+
+    .phonics-drop-slot.correct {
+      border-color: rgba(17, 166, 109, 0.55);
+      background: #effaf2;
+    }
+
+    .phonics-drop-slot.incorrect {
+      border-color: rgba(196, 75, 63, 0.45);
+      background: #fff3ef;
+    }
+
+    .phonics-option-card[draggable="true"] {
+      user-select: none;
+    }
+
+    .phonics-option-card.correct {
+      border-color: rgba(17, 166, 109, 0.55);
+      background: #effaf2;
+    }
+
+    .phonics-option-card.incorrect {
+      border-color: rgba(196, 75, 63, 0.45);
+      background: #fff3ef;
+    }
+
+    .phonics-hint {
+      margin: -8px auto 16px;
+      color: #7a8391;
+      font-size: 0.92rem;
+      font-weight: 800;
     }
 
     .phonics-drop-slot.filled {
@@ -2190,6 +2256,36 @@
       color: #0c9465;
       background: #effaf2;
       font-weight: 900;
+    }
+
+    .phonics-letter-parts {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin: 10px auto;
+      color: #111827;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.4rem, 9vw, 6.4rem);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .phonics-letter-part {
+      border: 0;
+      cursor: pointer;
+      padding: 0 4px 8px;
+      border-bottom: 8px solid transparent;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .phonics-letter-part:hover,
+    .phonics-letter-part.active {
+      color: #0c9465;
+      border-color: rgba(33, 191, 134, 0.42);
+      transform: translateY(-2px);
     }
 
     .phonics-mini-meaning {
@@ -2954,82 +3050,8 @@
           </div>
           <p class="phonics-flow-core" id="phonicsCoreLabel">Level 1：每次只解锁一组核心字素，再马上练习和解码。</p>
           <div class="phonics-flow" aria-label="自然拼读纵向学习轴">
-            <svg class="phonics-flow-path" viewBox="0 0 720 1040" aria-hidden="true" focusable="false">
-              <path d="M414 54 C540 104 534 174 330 188 C170 200 188 282 410 302 C586 318 560 397 340 420 C160 438 196 516 430 536 C594 550 540 630 318 648 C152 662 180 746 404 766 C590 783 550 862 338 886 C190 904 220 972 432 998" fill="none" stroke="rgba(39,48,67,.08)" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 20" />
-              <path d="M414 54 C540 104 534 174 330 188 C170 200 188 282 410 302 C586 318 560 397 340 420 C160 438 196 516 430 536 C594 550 540 630 318 648 C152 662 180 746 404 766 C590 783 550 862 338 886 C190 904 220 972 432 998" fill="none" stroke="rgba(33,191,134,.16)" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 22" />
-            </svg>
-            <button class="phonics-flow-step phonics-flow-step-1 active" type="button" data-phonics-card="0">
-              <span class="phonics-flow-index" data-index="1"></span>
-              <span class="phonics-flow-text">
-                <small>Set 1 · Core</small>
-                <strong data-step-label>先学音素 s/a/t/p</strong>
-                <span class="phonics-flow-copy">今天只学 4 个短促字母音：s / a / t / p。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-2" type="button" data-phonics-card="1">
-              <span class="phonics-flow-index" data-index="2"></span>
-              <span class="phonics-flow-text">
-                <small>Set 1 · GPC</small>
-                <strong data-step-label>再做 GPC 拼词</strong>
-                <span class="phonics-flow-copy">先学完 s / a / t / p，再用它们练 sat / tap / pat。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-3" type="button" data-phonics-card="2">
-              <span class="phonics-flow-index" data-index="3"></span>
-              <span class="phonics-flow-text">
-                <small>Set 1 · Decoding</small>
-                <strong data-step-label>最后做 Decoding</strong>
-                <span class="phonics-flow-copy">再把声音连起来，读出 sat / tap / pat。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-4" type="button" data-phonics-card="3">
-              <span class="phonics-flow-index" data-index="4"></span>
-              <span class="phonics-flow-text">
-                <small>Set 2 · Core</small>
-                <strong data-step-label>先学音素 i/n/m/d</strong>
-                <span class="phonics-flow-copy">再解锁 4 个新音，不急着一次学完 Level 1。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-5" type="button" data-phonics-card="4">
-              <span class="phonics-flow-index" data-index="5"></span>
-              <span class="phonics-flow-text">
-                <small>Set 2 · GPC</small>
-                <strong data-step-label>再做 GPC 拼词</strong>
-                <span class="phonics-flow-copy">学完 i / n / m / d，再去练 pin / nap / map。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-6" type="button" data-phonics-card="5">
-              <span class="phonics-flow-index" data-index="6"></span>
-              <span class="phonics-flow-text">
-                <small>Set 2 · Decoding</small>
-                <strong data-step-label>最后做 Decoding</strong>
-                <span class="phonics-flow-copy">再把声音合起来，读 pin / mat / did。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-7" type="button" data-phonics-card="6">
-              <span class="phonics-flow-index" data-index="7"></span>
-              <span class="phonics-flow-text">
-                <small>Set 3 · Core</small>
-                <strong data-step-label>先学音素 g/o/c/k</strong>
-                <span class="phonics-flow-copy">继续每天一点点，进入第三组核心字素。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-8" type="button" data-phonics-card="7">
-              <span class="phonics-flow-index" data-index="8"></span>
-              <span class="phonics-flow-text">
-                <small>Set 3 · GPC</small>
-                <strong data-step-label>再做 GPC 拼词</strong>
-                <span class="phonics-flow-copy">学完 g / o / c / k，再去练 cat / cot / dog。</span>
-              </span>
-            </button>
-            <button class="phonics-flow-step phonics-flow-step-9" type="button" data-phonics-card="8">
-              <span class="phonics-flow-index" data-index="9"></span>
-              <span class="phonics-flow-text">
-                <small>Set 3 · Decoding</small>
-                <strong data-step-label>最后做 Decoding</strong>
-                <span class="phonics-flow-copy">最后再读 cat / dog / kit，完成一轮闭环。</span>
-              </span>
-            </button>
+            <svg class="phonics-flow-path" id="phonicsFlowPath" viewBox="0 0 720 1040" aria-hidden="true" focusable="false"></svg>
+            <div id="phonicsFlowSteps"></div>
           </div>
           <div class="phonics-start-card">
             <p id="phonicsStartSummary">Level 1 · Set 1：先学 s / a / t / p，再马上练习。</p>
@@ -3536,142 +3558,282 @@
       {
         name: "Level 1",
         title: "基础字素与短元音入门",
-        core: "每次只解锁一组核心字素：Set 1 → Set 2 → Set 3",
-        pathIntro: "Level 1：每次只解锁一组核心字素，再马上练习和解码。",
+        core: "Set 1 s/a/t/p · Set 2 i/n/m/d · Set 3 g/o/c/k · Set 4 ck/e/u/r · Set 5 h/b/f/l",
+        pathIntro: "Level 1：五组小阶梯，每组都按“先学音素 → GPC拼词 → Decoding解码”完成一轮。",
         cards: [
           {
             type: "core",
+            set: "Set 1",
+            stage: "Core",
             mapLabel: "先学音素 s/a/t/p",
+            pathCopy: "今天只学 4 个短促字母音：s / a / t / p。",
             label: "Core Graphemes",
             prompt: "先点每个字母听声音，再跟读。重点是看到字母先想到字母音。",
+            audio: "public/phonics-audio/prompt-set-01-core.m4a",
             side: ["Listen first.", "Tap each sound.", "It's your turn!"],
-            groups: [
-              {
-                title: "Set 1",
-                caption: "今天只学：s / a / t / p",
-                items: [
-                  { text: "s", sound: "/s/", examples: "sat, sip, sun", speak: "s" },
-                  { text: "a", sound: "/æ/", examples: "sat, mat, cat", speak: "a" },
-                  { text: "t", sound: "/t/", examples: "tap, tin, cat", speak: "t" },
-                  { text: "p", sound: "/p/", examples: "pat, pin, map", speak: "p" }
-                ]
-              }
-            ]
+            groups: [{
+              title: "Set 1",
+              caption: "今天只学：s / a / t / p",
+              items: [
+                { text: "s", sound: "/s/", examples: "sat, sun", speak: "sss", audio: "public/phonics-audio/sound-s.m4a" },
+                { text: "a", sound: "/æ/", examples: "sat, mat", speak: "short a, apple, sat", audio: "public/phonics-audio/sound-a.m4a" },
+                { text: "t", sound: "/t/", examples: "tap, tin", speak: "t, tap", audio: "public/phonics-audio/sound-t.m4a" },
+                { text: "p", sound: "/p/", examples: "pat, pin", speak: "p, pat", audio: "public/phonics-audio/sound-p.m4a" }
+              ]
+            }]
           },
           {
             type: "gpc",
+            set: "Set 1",
+            stage: "GPC",
             mapLabel: "再做 GPC 拼词",
+            pathCopy: "用 s / a / t / p 补完整 sat / tap / pat。",
             label: "GPC 拼词",
-            prompt: "先回忆刚学的单个音，再把缺少的字素补进单词里。",
-            side: ["Use the sounds you learned.", "Tap the missing sound.", "Nice work!"],
+            prompt: "先回忆刚学的单个音，再把缺少的字素拖进空格或点选。",
+            audio: "public/phonics-audio/prompt-set-01-gpc.m4a",
+            side: ["Use the sounds you learned.", "Drag or tap.", "Check it."],
             items: [
-              { word: "sat", blank: "_ a t", answer: "s", options: ["s", "p", "m"], phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐" },
-              { word: "tap", blank: "_ a p", answer: "t", options: ["t", "s", "p"], phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头" },
-              { word: "pat", blank: "_ a t", answer: "p", options: ["p", "s", "t"], phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍" }
+              { word: "sat", blank: "_ a t", answer: "s", options: ["s", "p", "t"], parts: ["s", "a", "t"], phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐", audio: "public/phonics-audio/word-sat.m4a" },
+              { word: "tap", blank: "_ a p", answer: "t", options: ["t", "s", "p"], parts: ["t", "a", "p"], phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头", audio: "public/phonics-audio/word-tap.m4a" },
+              { word: "pat", blank: "_ a t", answer: "p", options: ["p", "s", "t"], parts: ["p", "a", "t"], phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍", audio: "public/phonics-audio/word-pat.m4a" }
             ]
           },
           {
             type: "word",
+            set: "Set 1",
+            stage: "Decoding",
             mapLabel: "最后做 Decoding",
+            pathCopy: "点声音、慢慢合并，再读出 sat / tap / pat。",
             label: "Word Decoding",
             prompt: "先点每个声音，再把声音连起来读成一个词。",
-            side: ["Sound it out.", "Slide the sounds together.", "Read it out loud."],
+            audio: "public/phonics-audio/prompt-set-01-decode.m4a",
+            side: ["Sound it out.", "Blend slowly.", "Read it out loud."],
             items: [
-              { word: "sat", phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐下" },
-              { word: "tap", phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头" },
-              { word: "pat", phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍" }
+              { word: "sat", parts: ["s", "a", "t"], phonemes: ["/s/", "/æ/", "/t/"], emoji: "🪑", meaning: "坐下", audio: "public/phonics-audio/word-sat.m4a" },
+              { word: "tap", parts: ["t", "a", "p"], phonemes: ["/t/", "/æ/", "/p/"], emoji: "🚰", meaning: "轻拍 / 水龙头", audio: "public/phonics-audio/word-tap.m4a" },
+              { word: "pat", parts: ["p", "a", "t"], phonemes: ["/p/", "/æ/", "/t/"], emoji: "👏", meaning: "轻拍", audio: "public/phonics-audio/word-pat.m4a" }
             ]
           },
           {
             type: "core",
+            set: "Set 2",
+            stage: "Core",
             mapLabel: "先学音素 i/n/m/d",
+            pathCopy: "再解锁 4 个新音，不一次塞完整个 Level。",
             label: "Core Graphemes",
             prompt: "只解锁下一组 4 个核心字素，再回到练习和解码。",
+            audio: "public/phonics-audio/prompt-set-02-core.m4a",
             side: ["New small set.", "Tap each sound.", "Four sounds only."],
-            groups: [
-              {
-                title: "Set 2",
-                caption: "今天只学：i / n / m / d",
-                items: [
-                  { text: "i", sound: "/ɪ/", examples: "sit, pin, dig", speak: "i" },
-                  { text: "n", sound: "/n/", examples: "nap, tin, man", speak: "n" },
-                  { text: "m", sound: "/m/", examples: "mat, map, man", speak: "m" },
-                  { text: "d", sound: "/d/", examples: "dig, dip, did", speak: "d" }
-                ]
-              }
-            ]
+            groups: [{
+              title: "Set 2",
+              caption: "今天只学：i / n / m / d",
+              items: [
+                { text: "i", sound: "/ɪ/", examples: "sit, pin", speak: "short i, insect, pin", audio: "public/phonics-audio/sound-i.m4a" },
+                { text: "n", sound: "/n/", examples: "nap, tin", speak: "n, nap", audio: "public/phonics-audio/sound-n.m4a" },
+                { text: "m", sound: "/m/", examples: "mat, map", speak: "mmm, mat", audio: "public/phonics-audio/sound-m.m4a" },
+                { text: "d", sound: "/d/", examples: "dig, did", speak: "d, dig", audio: "public/phonics-audio/sound-d.m4a" }
+              ]
+            }]
           },
           {
             type: "gpc",
+            set: "Set 2",
+            stage: "GPC",
             mapLabel: "再做 GPC 拼词",
+            pathCopy: "把 Set 1 和 Set 2 的声音组合起来。",
             label: "GPC 拼词",
-            prompt: "先把 Set 1 和 Set 2 学过的声音想起来，再补完整单词。",
-            side: ["Use the sounds you know.", "Find the missing sound.", "Small steps."],
+            prompt: "先把已经学过的声音想起来，再补完整单词。",
+            audio: "public/phonics-audio/prompt-set-02-gpc.m4a",
+            side: ["Use what you know.", "Find the missing sound.", "Small steps."],
             items: [
-              { word: "pin", blank: "p _ n", answer: "i", options: ["i", "a", "t"], phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针" },
-              { word: "nap", blank: "_ a p", answer: "n", options: ["n", "m", "s"], phonemes: ["/n/", "/æ/", "/p/"], emoji: "😴", meaning: "小睡" },
-              { word: "map", blank: "_ a p", answer: "m", options: ["m", "n", "t"], phonemes: ["/m/", "/æ/", "/p/"], emoji: "🗺️", meaning: "地图" }
+              { word: "pin", blank: "p _ n", answer: "i", options: ["i", "a", "t"], parts: ["p", "i", "n"], phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针", audio: "public/phonics-audio/word-pin.m4a" },
+              { word: "nap", blank: "_ a p", answer: "n", options: ["n", "m", "s"], parts: ["n", "a", "p"], phonemes: ["/n/", "/æ/", "/p/"], emoji: "😴", meaning: "小睡", audio: "public/phonics-audio/word-nap.m4a" },
+              { word: "map", blank: "_ a p", answer: "m", options: ["m", "n", "t"], parts: ["m", "a", "p"], phonemes: ["/m/", "/æ/", "/p/"], emoji: "🗺️", meaning: "地图", audio: "public/phonics-audio/word-map.m4a" }
             ]
           },
           {
             type: "word",
+            set: "Set 2",
+            stage: "Decoding",
             mapLabel: "最后做 Decoding",
+            pathCopy: "读 pin / mat / did，感受声音合并。",
             label: "Word Decoding",
             prompt: "把 Set 1 和 Set 2 的声音合起来读。",
+            audio: "public/phonics-audio/prompt-set-02-decode.m4a",
             side: ["Sound it out.", "Blend slowly.", "Read it clearly."],
             items: [
-              { word: "pin", phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针" },
-              { word: "mat", phonemes: ["/m/", "/æ/", "/t/"], emoji: "🧘", meaning: "垫子" },
-              { word: "did", phonemes: ["/d/", "/ɪ/", "/d/"], emoji: "✅", meaning: "做了" }
+              { word: "pin", parts: ["p", "i", "n"], phonemes: ["/p/", "/ɪ/", "/n/"], emoji: "📌", meaning: "别针", audio: "public/phonics-audio/word-pin.m4a" },
+              { word: "mat", parts: ["m", "a", "t"], phonemes: ["/m/", "/æ/", "/t/"], emoji: "🧘", meaning: "垫子", audio: "public/phonics-audio/word-mat.m4a" },
+              { word: "did", parts: ["d", "i", "d"], phonemes: ["/d/", "/ɪ/", "/d/"], emoji: "✅", meaning: "做了", audio: "public/phonics-audio/word-did.m4a" }
             ]
           },
           {
             type: "core",
+            set: "Set 3",
+            stage: "Core",
             mapLabel: "先学音素 g/o/c/k",
+            pathCopy: "继续每天一点点，进入第三组核心字素。",
             label: "Core Graphemes",
             prompt: "进入第三组核心字素，仍然只学 4 个左右。",
+            audio: "public/phonics-audio/prompt-set-03-core.m4a",
             side: ["Next small set.", "Tap each sound.", "Keep going."],
-            groups: [
-              {
-                title: "Set 3",
-                caption: "今天只学：g / o / c / k",
-                items: [
-                  { text: "g", sound: "/g/", examples: "gap, got, dig", speak: "g" },
-                  { text: "o", sound: "/ɒ/", examples: "got, cot, dog", speak: "o" },
-                  { text: "c", sound: "/k/", examples: "cat, cot, cap", speak: "c" },
-                  { text: "k", sound: "/k/", examples: "kit, kid", speak: "k" }
-                ]
-              }
-            ]
+            groups: [{
+              title: "Set 3",
+              caption: "今天只学：g / o / c / k",
+              items: [
+                { text: "g", sound: "/g/", examples: "gap, dog", speak: "g, gap", audio: "public/phonics-audio/sound-g.m4a" },
+                { text: "o", sound: "/ɒ/", examples: "cot, dog", speak: "short o, orange, dog", audio: "public/phonics-audio/sound-o.m4a" },
+                { text: "c", sound: "/k/", examples: "cat, cap", speak: "c, cat", audio: "public/phonics-audio/sound-c.m4a" },
+                { text: "k", sound: "/k/", examples: "kit, kid", speak: "k, kit", audio: "public/phonics-audio/sound-k.m4a" }
+              ]
+            }]
           },
           {
             type: "gpc",
+            set: "Set 3",
+            stage: "GPC",
             mapLabel: "再做 GPC 拼词",
+            pathCopy: "学完 g / o / c / k，再去练 cat / cot / dog。",
             label: "GPC 拼词",
             prompt: "先回想第三组新声音，再把它们补进单词里。",
+            audio: "public/phonics-audio/prompt-set-03-gpc.m4a",
             side: ["Can you complete it?", "Use the new sounds.", "Try one card."],
             items: [
-              { word: "cat", blank: "_ a t", answer: "c", options: ["c", "k", "p"], phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫" },
-              { word: "cot", blank: "c _ t", answer: "o", options: ["o", "a", "i"], phonemes: ["/k/", "/ɒ/", "/t/"], emoji: "🛏️", meaning: "小床" },
-              { word: "dog", blank: "d _ g", answer: "o", options: ["o", "a", "i"], phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗" }
+              { word: "cat", blank: "_ a t", answer: "c", options: ["c", "k", "p"], parts: ["c", "a", "t"], phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫", audio: "public/phonics-audio/word-cat.m4a" },
+              { word: "cot", blank: "c _ t", answer: "o", options: ["o", "a", "i"], parts: ["c", "o", "t"], phonemes: ["/k/", "/ɒ/", "/t/"], emoji: "🛏️", meaning: "小床", audio: "public/phonics-audio/word-cot.m4a" },
+              { word: "dog", blank: "d _ g", answer: "o", options: ["o", "a", "i"], parts: ["d", "o", "g"], phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗", audio: "public/phonics-audio/word-dog.m4a" }
             ]
           },
           {
             type: "word",
+            set: "Set 3",
+            stage: "Decoding",
             mapLabel: "最后做 Decoding",
+            pathCopy: "读 cat / dog / kit，完成第三组闭环。",
             label: "Word Decoding",
             prompt: "完成第三组 CVC 单词解码。",
+            audio: "public/phonics-audio/prompt-set-03-decode.m4a",
             side: ["Decode first.", "Blend the sounds.", "Read out loud."],
             items: [
-              { word: "cat", phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫" },
-              { word: "dog", phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗" },
-              { word: "kit", phonemes: ["/k/", "/ɪ/", "/t/"], emoji: "🧰", meaning: "工具包" }
+              { word: "cat", parts: ["c", "a", "t"], phonemes: ["/k/", "/æ/", "/t/"], emoji: "🐱", meaning: "猫", audio: "public/phonics-audio/word-cat.m4a" },
+              { word: "dog", parts: ["d", "o", "g"], phonemes: ["/d/", "/ɒ/", "/g/"], emoji: "🐶", meaning: "狗", audio: "public/phonics-audio/word-dog.m4a" },
+              { word: "kit", parts: ["k", "i", "t"], phonemes: ["/k/", "/ɪ/", "/t/"], emoji: "🧰", meaning: "工具包", audio: "public/phonics-audio/word-kit.m4a" }
+            ]
+          },
+          {
+            type: "core",
+            set: "Set 4",
+            stage: "Core",
+            mapLabel: "先学音素 ck/e/u/r",
+            pathCopy: "进入 ck 和 e / u / r，继续小步推进。",
+            label: "Core Graphemes",
+            prompt: "ck 是两个字母代表一个 /k/ 音，孩子只需要把它当成一个声音单位。",
+            audio: "public/phonics-audio/prompt-set-04-core.m4a",
+            side: ["One sound unit.", "Tap ck together.", "Then read."],
+            groups: [{
+              title: "Set 4",
+              caption: "今天只学：ck / e / u / r",
+              items: [
+                { text: "ck", sound: "/k/", examples: "duck, sock", speak: "ck, duck", audio: "public/phonics-audio/sound-ck.m4a" },
+                { text: "e", sound: "/e/", examples: "pen, red", speak: "short e, egg, pen", audio: "public/phonics-audio/sound-e.m4a" },
+                { text: "u", sound: "/ʌ/", examples: "sun, duck", speak: "short u, up, sun", audio: "public/phonics-audio/sound-u.m4a" },
+                { text: "r", sound: "/r/", examples: "red, run", speak: "r, red", audio: "public/phonics-audio/sound-r.m4a" }
+              ]
+            }]
+          },
+          {
+            type: "gpc",
+            set: "Set 4",
+            stage: "GPC",
+            mapLabel: "再做 GPC 拼词",
+            pathCopy: "练 duck / sun / red / pen，注意 ck 是一个音。",
+            label: "GPC 拼词",
+            prompt: "把 ck 当成一个整体拖进空格，再检查是否正确。",
+            audio: "public/phonics-audio/prompt-set-04-gpc.m4a",
+            side: ["ck stays together.", "Drag one card.", "Check it."],
+            items: [
+              { word: "duck", blank: "d u _", answer: "ck", options: ["ck", "c", "k"], parts: ["d", "u", "ck"], phonemes: ["/d/", "/ʌ/", "/k/"], emoji: "🦆", meaning: "鸭子", audio: "public/phonics-audio/word-duck.m4a" },
+              { word: "sun", blank: "s _ n", answer: "u", options: ["u", "a", "o"], parts: ["s", "u", "n"], phonemes: ["/s/", "/ʌ/", "/n/"], emoji: "☀️", meaning: "太阳", audio: "public/phonics-audio/word-sun.m4a" },
+              { word: "red", blank: "_ e d", answer: "r", options: ["r", "n", "m"], parts: ["r", "e", "d"], phonemes: ["/r/", "/e/", "/d/"], emoji: "🔴", meaning: "红色", audio: "public/phonics-audio/word-red.m4a" },
+              { word: "pen", blank: "p _ n", answer: "e", options: ["e", "i", "a"], parts: ["p", "e", "n"], phonemes: ["/p/", "/e/", "/n/"], emoji: "✏️", meaning: "笔", audio: "public/phonics-audio/word-pen.m4a" }
+            ]
+          },
+          {
+            type: "word",
+            set: "Set 4",
+            stage: "Decoding",
+            mapLabel: "最后做 Decoding",
+            pathCopy: "读 duck / sun / red / pen，感受新短元音。",
+            label: "Word Decoding",
+            prompt: "先点每个声音，再读完整单词；ck 要合在一起点读。",
+            audio: "public/phonics-audio/prompt-set-04-decode.m4a",
+            side: ["Tap ck together.", "Blend the sounds.", "Read smoothly."],
+            items: [
+              { word: "duck", parts: ["d", "u", "ck"], phonemes: ["/d/", "/ʌ/", "/k/"], emoji: "🦆", meaning: "鸭子", audio: "public/phonics-audio/word-duck.m4a" },
+              { word: "sun", parts: ["s", "u", "n"], phonemes: ["/s/", "/ʌ/", "/n/"], emoji: "☀️", meaning: "太阳", audio: "public/phonics-audio/word-sun.m4a" },
+              { word: "red", parts: ["r", "e", "d"], phonemes: ["/r/", "/e/", "/d/"], emoji: "🔴", meaning: "红色", audio: "public/phonics-audio/word-red.m4a" },
+              { word: "pen", parts: ["p", "e", "n"], phonemes: ["/p/", "/e/", "/n/"], emoji: "✏️", meaning: "笔", audio: "public/phonics-audio/word-pen.m4a" }
+            ]
+          },
+          {
+            type: "core",
+            set: "Set 5",
+            stage: "Core",
+            mapLabel: "先学音素 h/b/f/l",
+            pathCopy: "Level 1 最后一组：h / b / f / l。",
+            label: "Core Graphemes",
+            prompt: "最后一组仍然只保留 4 个核心音，双写辅音留到后续 Level。",
+            audio: "public/phonics-audio/prompt-set-05-core.m4a",
+            side: ["Last Level 1 set.", "Four sounds only.", "You can do it."],
+            groups: [{
+              title: "Set 5",
+              caption: "今天只学：h / b / f / l",
+              items: [
+                { text: "h", sound: "/h/", examples: "hat, him", speak: "h, hat", audio: "public/phonics-audio/sound-h.m4a" },
+                { text: "b", sound: "/b/", examples: "bed, bat", speak: "b, bed", audio: "public/phonics-audio/sound-b.m4a" },
+                { text: "f", sound: "/f/", examples: "fan, fun", speak: "fff, fan", audio: "public/phonics-audio/sound-f.m4a" },
+                { text: "l", sound: "/l/", examples: "lip, log", speak: "l, lip", audio: "public/phonics-audio/sound-l.m4a" }
+              ]
+            }]
+          },
+          {
+            type: "gpc",
+            set: "Set 5",
+            stage: "GPC",
+            mapLabel: "再做 GPC 拼词",
+            pathCopy: "练 hat / bed / fan / lip，补一个缺失字素。",
+            label: "GPC 拼词",
+            prompt: "最后一组 GPC：看图、说词、补字素，再点 Check。",
+            audio: "public/phonics-audio/prompt-set-05-gpc.m4a",
+            side: ["Look and say.", "Choose the sound.", "Check it."],
+            items: [
+              { word: "hat", blank: "_ a t", answer: "h", options: ["h", "b", "f"], parts: ["h", "a", "t"], phonemes: ["/h/", "/æ/", "/t/"], emoji: "🎩", meaning: "帽子", audio: "public/phonics-audio/word-hat.m4a" },
+              { word: "bed", blank: "_ e d", answer: "b", options: ["b", "d", "p"], parts: ["b", "e", "d"], phonemes: ["/b/", "/e/", "/d/"], emoji: "🛏️", meaning: "床", audio: "public/phonics-audio/word-bed.m4a" },
+              { word: "fan", blank: "_ a n", answer: "f", options: ["f", "h", "l"], parts: ["f", "a", "n"], phonemes: ["/f/", "/æ/", "/n/"], emoji: "🌀", meaning: "风扇", audio: "public/phonics-audio/word-fan.m4a" },
+              { word: "lip", blank: "_ i p", answer: "l", options: ["l", "f", "r"], parts: ["l", "i", "p"], phonemes: ["/l/", "/ɪ/", "/p/"], emoji: "👄", meaning: "嘴唇", audio: "public/phonics-audio/word-lip.m4a" }
+            ]
+          },
+          {
+            type: "word",
+            set: "Set 5",
+            stage: "Decoding",
+            mapLabel: "最后做 Decoding",
+            pathCopy: "读 hat / bed / fan / lip，完成 Level 1。",
+            label: "Word Decoding",
+            prompt: "完成 Level 1 最后一组单词解码，可以反复点声音复习。",
+            audio: "public/phonics-audio/prompt-set-05-decode.m4a",
+            side: ["Last set.", "Blend and read.", "Level 1 complete."],
+            items: [
+              { word: "hat", parts: ["h", "a", "t"], phonemes: ["/h/", "/æ/", "/t/"], emoji: "🎩", meaning: "帽子", audio: "public/phonics-audio/word-hat.m4a" },
+              { word: "bed", parts: ["b", "e", "d"], phonemes: ["/b/", "/e/", "/d/"], emoji: "🛏️", meaning: "床", audio: "public/phonics-audio/word-bed.m4a" },
+              { word: "fan", parts: ["f", "a", "n"], phonemes: ["/f/", "/æ/", "/n/"], emoji: "🌀", meaning: "风扇", audio: "public/phonics-audio/word-fan.m4a" },
+              { word: "lip", parts: ["l", "i", "p"], phonemes: ["/l/", "/ɪ/", "/p/"], emoji: "👄", meaning: "嘴唇", audio: "public/phonics-audio/word-lip.m4a" }
             ]
           }
         ]
       },
-      { name: "Level 2", title: "补全基础辅音与二合音", core: "ck, e, u, r · h, b, f, ll, ss", cards: [] },
-      { name: "Level 3", title: "低频辅音与更多二合音", core: "j, v, w, x, y, z · qu, ch, sh, th, ng", cards: [] },
+      { name: "Level 2", title: "双写辅音与更多基础辅音", core: "ff, ll, ss · j, v, w, x, y, z", cards: [] },
+      { name: "Level 3", title: "低频辅音与二合音", core: "qu, ch, sh, th, ng · 更多短词解码", cards: [] },
       { name: "Level 4", title: "元音组合与复杂字素", core: "ai, ee, igh, oa, oo, ar, or", cards: [] },
       { name: "Level 5", title: "辅音连缀与混合拼读", core: "st, sp, cl, fl, bl, cr, tr", cards: [] },
       { name: "Level 6", title: "词族与 Magic E", core: "-at, -op, -in · a_e, i_e, o_e, u_e", cards: [] },
@@ -3688,10 +3850,23 @@
       mode: "voiceText",
       progressCardIndex: 0,
       selectedAnswer: "",
+      answerChecked: false,
+      decodePartIndex: -1,
       completed: false
     };
 
     const PHONICS_PROGRESS_KEY = "foru_phonics_progress_v1";
+    const phonicsSoundAudioByGrapheme = {};
+
+    phonicsLevels.forEach((level) => {
+      (level.cards || []).forEach((card) => {
+        (card.groups || []).forEach((group) => {
+          (group.items || []).forEach((item) => {
+            if (item.text && item.audio) phonicsSoundAudioByGrapheme[item.text] = item.audio;
+          });
+        });
+      });
+    });
 
     let phonicsRecorder = null;
     let phonicsStream = null;
@@ -3701,6 +3876,8 @@
     let phonicsRecordingDiscarded = false;
     let phonicsAudioUrl = "";
     let phonicsDemoAudio = null;
+    let phonicsAudioSequenceToken = 0;
+    let phonicsDraggedOption = "";
 
     function hasPhonicsProgress() {
       return phonicsState.levelIndex > 0 || phonicsState.cardIndex > 0 || phonicsState.taskIndex > 0 || phonicsState.completed;
@@ -3762,6 +3939,8 @@
       phonicsState.taskIndex = 0;
       phonicsState.progressCardIndex = 0;
       phonicsState.selectedAnswer = "";
+      phonicsState.answerChecked = false;
+      phonicsState.decodePartIndex = -1;
       phonicsState.completed = false;
       renderPhonicsLevels();
       renderPhonicsMap();
@@ -4037,6 +4216,7 @@
 
     function resetPhonicsPlayback() {
       const playback = document.querySelector("#phonicsPlayback");
+      phonicsAudioSequenceToken += 1;
       if (phonicsDemoAudio) {
         phonicsDemoAudio.pause();
         phonicsDemoAudio = null;
@@ -4057,13 +4237,67 @@
 
     function getPhonicsSpokenText(card, task) {
       if (!card || !task) return "";
+      if (card.type === "core") return card.prompt || "";
+      if (card.type === "gpc") return task.word || card.prompt || "";
       if (card.type === "word") return task.word || "";
       if (card.type === "sentence") return task.sentence || "";
       return "";
     }
 
+    function playPhonicsAudio(audio, statusLabel = "示范音频") {
+      if (!audio) return false;
+      phonicsAudioSequenceToken += 1;
+      if (phonicsDemoAudio) {
+        phonicsDemoAudio.pause();
+        phonicsDemoAudio = null;
+      }
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+      phonicsDemoAudio = new Audio(audio);
+      phonicsDemoAudio.playbackRate = phonicsState.speed;
+      phonicsDemoAudio.addEventListener("ended", () => {
+        phonicsDemoAudio = null;
+      }, { once: true });
+      phonicsDemoAudio.play().then(() => {
+        setPhonicsStatus(`正在播放：${statusLabel}。`);
+      }).catch(() => {
+        setPhonicsStatus(`音频文件暂时无法播放：${statusLabel}。后续替换同名文件即可。`);
+      });
+      return true;
+    }
+
+    async function playPhonicsAudioSequence(parts = [], label = "分步点读") {
+      const audios = parts.map((part) => ({
+        part,
+        audio: phonicsSoundAudioByGrapheme[part]
+      })).filter((item) => item.audio);
+      if (!audios.length) return false;
+      const token = ++phonicsAudioSequenceToken;
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+      if (phonicsDemoAudio) {
+        phonicsDemoAudio.pause();
+        phonicsDemoAudio = null;
+      }
+      setPhonicsStatus(`正在播放 ${label}：${parts.join(" · ")}。`);
+      for (const item of audios) {
+        if (token !== phonicsAudioSequenceToken) return true;
+        await new Promise((resolve) => {
+          const audio = new Audio(item.audio);
+          phonicsDemoAudio = audio;
+          audio.playbackRate = phonicsState.speed;
+          audio.addEventListener("ended", resolve, { once: true });
+          audio.addEventListener("error", resolve, { once: true });
+          audio.play().catch(resolve);
+        });
+      }
+      if (token === phonicsAudioSequenceToken) phonicsDemoAudio = null;
+      return true;
+    }
+
     function speakPhonicsText(text, statusLabel = text) {
       if (!text || !("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") return false;
+      phonicsAudioSequenceToken += 1;
       if (phonicsDemoAudio) {
         phonicsDemoAudio.pause();
         phonicsDemoAudio = null;
@@ -4179,6 +4413,8 @@
           phonicsState.cardIndex = 0;
           phonicsState.taskIndex = 0;
           phonicsState.selectedAnswer = "";
+          phonicsState.answerChecked = false;
+          phonicsState.decodePartIndex = -1;
           phonicsState.progressCardIndex = 0;
           phonicsState.completed = false;
           savePhonicsProgress();
@@ -4187,6 +4423,74 @@
           renderPhonicsPractice();
         });
         list.appendChild(button);
+      });
+    }
+
+    function buildPhonicsFlowPath(points) {
+      if (!points.length) return "";
+      return points.slice(1).reduce((path, point, index) => {
+        const previous = points[index];
+        const midY = (previous.y + point.y) / 2;
+        return `${path} C ${previous.x} ${midY} ${point.x} ${midY} ${point.x} ${point.y}`;
+      }, `M ${points[0].x} ${points[0].y}`);
+    }
+
+    function renderPhonicsFlow(level) {
+      const flow = document.querySelector(".phonics-flow");
+      const pathSvg = document.querySelector("#phonicsFlowPath");
+      const stepWrap = document.querySelector("#phonicsFlowSteps");
+      if (!flow || !pathSvg || !stepWrap) return;
+      const cards = level.cards || [];
+      stepWrap.innerHTML = "";
+      if (!cards.length) {
+        pathSvg.innerHTML = "";
+        flow.style.minHeight = "360px";
+        return;
+      }
+
+      const isMobile = window.matchMedia("(max-width: 760px)").matches;
+      const gap = isMobile ? 76 : 70;
+      const topOffset = isMobile ? 22 : 28;
+      const height = Math.max(isMobile ? 760 : 900, topOffset + (cards.length - 1) * gap + 130);
+      const xPattern = isMobile ? [150, 430, 170, 410] : [430, 230, 500, 270, 470];
+      const leftPattern = isMobile ? [8, 28, 7, 26] : [38, 16, 46, 24, 42];
+      const points = cards.map((_, index) => ({
+        x: xPattern[index % xPattern.length],
+        y: topOffset + index * gap + 25
+      }));
+      const d = buildPhonicsFlowPath(points);
+
+      flow.style.minHeight = `${height}px`;
+      pathSvg.setAttribute("viewBox", `0 0 720 ${height}`);
+      pathSvg.innerHTML = `
+        <path d="${d}" fill="none" stroke="rgba(39,48,67,.08)" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 20" />
+        <path d="${d}" fill="none" stroke="rgba(33,191,134,.16)" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 22" />
+      `;
+
+      cards.forEach((card, index) => {
+        const button = document.createElement("button");
+        const isFuture = index > phonicsState.progressCardIndex && index !== phonicsState.cardIndex;
+        button.type = "button";
+        button.className = [
+          "phonics-flow-step",
+          index === phonicsState.cardIndex ? "active" : "",
+          index < phonicsState.progressCardIndex || phonicsState.completed ? "completed" : "",
+          isFuture ? "future" : ""
+        ].filter(Boolean).join(" ");
+        button.dataset.phonicsCard = String(index);
+        button.style.left = `${leftPattern[index % leftPattern.length]}%`;
+        button.style.top = `${topOffset + index * gap}px`;
+        if (card.type === "core") button.style.width = isMobile ? "86%" : "min(390px, 64%)";
+        button.innerHTML = `
+          <span class="phonics-flow-index" data-index="${index + 1}"></span>
+          <span class="phonics-flow-text">
+            <small>${escapeHtml(card.set || `Step ${index + 1}`)} · ${escapeHtml(card.stage || card.type)}</small>
+            <strong data-step-label>${escapeHtml(card.mapLabel || card.label || "练习")}</strong>
+            <span class="phonics-flow-copy">${escapeHtml(card.pathCopy || card.prompt || "点击进入这个小站。")}</span>
+          </span>
+        `;
+        button.addEventListener("click", () => setPhonicsCard(index));
+        stepWrap.appendChild(button);
       });
     }
 
@@ -4220,29 +4524,18 @@
       if (resetButton) {
         resetButton.hidden = !hasCards || !hasPhonicsProgress();
       }
-      document.querySelectorAll("[data-phonics-card]").forEach((button) => {
-        const cardIndex = Number(button.dataset.phonicsCard);
-        const card = level.cards[cardIndex];
-        const isFuture = Boolean(card) && cardIndex > phonicsState.progressCardIndex && cardIndex !== phonicsState.cardIndex;
-        button.hidden = !card;
-        button.disabled = !card;
-        button.classList.toggle("active", cardIndex === phonicsState.cardIndex);
-        button.classList.toggle("future", isFuture);
-        button.classList.toggle("completed", Boolean(card) && cardIndex < phonicsState.progressCardIndex);
-        const label = button.querySelector("[data-step-label]");
-        if (card && label) label.textContent = card.mapLabel;
-        if (card && !label) button.textContent = card.mapLabel;
-      });
+      renderPhonicsFlow(level);
     }
 
     function renderCoreActivity(card, group) {
       const groups = card.groups || [];
       const activeGroup = group || groups[0] || { title: "Core", caption: "核心字素", items: [] };
       const cards = (activeGroup.items || []).map((item) => `
-        <button class="phonics-sound-card" type="button" data-phonics-speak="${escapeHtml(item.text)}" data-phonics-sound="${escapeHtml(item.sound)}" data-phonics-label="${escapeHtml(item.examples)}">
+        <button class="phonics-sound-card" type="button" data-phonics-speak="${escapeHtml(item.speak || item.text)}" data-phonics-audio="${escapeHtml(item.audio || "")}" data-phonics-sound="${escapeHtml(item.sound)}" data-phonics-label="${escapeHtml(item.examples)}">
           <strong>${escapeHtml(item.text)}</strong>
           <span>${escapeHtml(item.sound)}</span>
           <span>${escapeHtml(item.examples)}</span>
+          <span class="sound-play-label">tap sound</span>
         </button>
       `).join("");
       return `
@@ -4259,13 +4552,16 @@
 
     function renderGpcActivity(card, task) {
       const selected = phonicsState.selectedAnswer;
+      const checked = phonicsState.answerChecked;
+      const isCorrect = selected && selected === task.answer;
       const phonemes = (task.phonemes || []).map((phoneme) => `
         <span class="active">${escapeHtml(phoneme)}</span>
       `).join("");
       const wordParts = String(task.blank || "").split(" ").map((part) => {
         if (part === "_") {
+          const slotState = checked ? (isCorrect ? "correct" : "incorrect") : "";
           return `
-            <div class="phonics-drop-slot ${selected ? "filled" : ""}" aria-label="缺失字素">
+            <div class="phonics-drop-slot ${selected ? "filled" : ""} ${slotState}" aria-label="缺失字素" data-gpc-drop>
               <strong>${selected ? escapeHtml(selected) : "_"}</strong>
               <span>缺的音</span>
             </div>
@@ -4278,16 +4574,20 @@
           </div>
         `;
       }).join("");
-      const options = (task.options || []).map((option) => `
-        <button class="phonics-option-card ${selected === option ? "selected" : ""}" type="button" data-gpc-option="${escapeHtml(option)}">
+      const options = (task.options || []).map((option) => {
+        const optionState = checked && selected === option ? (isCorrect ? "correct" : "incorrect") : "";
+        return `
+        <button class="phonics-option-card ${selected === option ? "selected" : ""} ${optionState}" type="button" draggable="true" data-gpc-option="${escapeHtml(option)}">
           <strong>${escapeHtml(option)}</strong>
-          <span>点选</span>
+          <span>拖拽 / 点选</span>
         </button>
-      `).join("");
-      const isCorrect = selected && selected === task.answer;
-      const result = selected
-        ? `<p class="phonics-result ${isCorrect ? "" : "error"}">${isCorrect ? `正确：${escapeHtml(task.word)} 的缺失字素是 ${escapeHtml(task.answer)}。` : "再试一次，先慢慢说出这个词的每个声音。"}</p>`
-        : `<p class="phonics-result">选择一个字素，补完整下面的词。</p>`;
+      `;
+      }).join("");
+      const result = !selected
+        ? `<p class="phonics-result">拖动或点选一个字素，补完整下面的词。</p>`
+        : checked
+          ? `<p class="phonics-result ${isCorrect ? "" : "error"}">${isCorrect ? `正确：${escapeHtml(task.word)} 的缺失字素是 ${escapeHtml(task.answer)}。` : "再试一次，先慢慢说出这个词的每个声音。"}</p>`
+          : `<p class="phonics-result">已选择 ${escapeHtml(selected)}，点击 Check 检查。</p>`;
       return `
         <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${card.items.length}</span>
         <div class="phonics-image-card" aria-hidden="true"><span>${escapeHtml(task.emoji || "🔤")}</span></div>
@@ -4296,25 +4596,39 @@
         <div class="phonics-phoneme-row">${phonemes}</div>
         <div class="phonics-gpc-board">${wordParts}</div>
         <div class="phonics-option-row">${options}</div>
+        <p class="phonics-hint">可以拖进空格，也可以直接点选；点 Check 后再进入下一题。</p>
+        <button class="phonics-check" type="button" data-gpc-check>Check</button>
         ${result}
       `;
     }
 
     function renderWordActivity(card, task) {
-      const phonemes = (task.phonemes || []).map((phoneme) => `
-        <span class="active">${escapeHtml(phoneme)}</span>
+      const parts = task.parts || String(task.word || "").split("");
+      const activeIndex = phonicsState.decodePartIndex;
+      const phonemes = (task.phonemes || []).map((phoneme, index) => `
+        <span class="${activeIndex < 0 || activeIndex === index ? "active" : ""}">${escapeHtml(phoneme)}</span>
+      `).join("");
+      const partButtons = parts.map((part, index) => `
+        <button class="phonics-letter-part ${activeIndex === index ? "active" : ""}" type="button" data-decode-part="${index}" data-phonics-audio="${escapeHtml(phonicsSoundAudioByGrapheme[part] || "")}" data-phonics-speak="${escapeHtml(part)}" data-phonics-sound="${escapeHtml(task.phonemes?.[index] || "")}" aria-label="点读 ${escapeHtml(part)}">
+          ${escapeHtml(part)}
+        </button>
       `).join("");
       return `
         <span class="phonics-activity-label">Level 1 · ${escapeHtml(card.label)} · ${phonicsState.taskIndex + 1}/${card.items.length}</span>
         <div class="phonics-image-card" aria-hidden="true"><span>${escapeHtml(task.emoji || "📘")}</span></div>
-        <div class="phonics-letter word">
-          ${escapeHtml(task.word)}
-          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.word)}" aria-label="播放${escapeHtml(task.word)}示范">▶</button>
+        <div class="phonics-letter-parts" aria-label="${escapeHtml(task.word)} 分步点读">
+          ${partButtons}
+          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.word)}" data-phonics-audio="${escapeHtml(task.audio || "")}" aria-label="播放${escapeHtml(task.word)}示范">▶</button>
         </div>
         <div class="phonics-decode-steps" aria-label="解码三步">
           <span><strong>1 点声音</strong>逐个说出每个音</span>
           <span><strong>2 合起来</strong>把声音慢慢滑在一起</span>
           <span><strong>3 大声读</strong>读成完整单词</span>
+        </div>
+        <div class="phonics-decode-controls">
+          <button class="phonics-decode-button" type="button" data-decode-action="sound">1 点声音</button>
+          <button class="phonics-decode-button" type="button" data-decode-action="blend">2 Blend</button>
+          <button class="phonics-decode-button" type="button" data-decode-action="read">3 Read</button>
         </div>
         <div class="phonics-phoneme-row">${phonemes}</div>
         <p class="phonics-mini-meaning">${escapeHtml(task.meaning || "")}</p>
@@ -4329,7 +4643,7 @@
         <div class="phonics-sentence-picture" aria-hidden="true"><span>${escapeHtml(task.emoji || "📖")}</span></div>
         <div class="phonics-letter sentence">
           ${escapeHtml(task.sentence)}
-          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.sentence)}" aria-label="播放短句示范">▶</button>
+          <button class="phonics-speaker" type="button" data-phonics-speak="${escapeHtml(task.sentence)}" data-phonics-audio="${escapeHtml(task.audio || "")}" aria-label="播放短句示范">▶</button>
         </div>
         <div class="phonics-focus-row">${focus}</div>
         <p class="phonics-mini-meaning">${escapeHtml(task.meaning || "")}</p>
@@ -4354,31 +4668,93 @@
         button.addEventListener("click", () => {
           stage.querySelectorAll("[data-phonics-speak]").forEach((node) => node.classList.remove("active"));
           button.classList.add("active");
+          if (button.dataset.decodePart) {
+            phonicsState.decodePartIndex = Number(button.dataset.decodePart);
+            stage.querySelectorAll("[data-decode-part]").forEach((node) => {
+              node.classList.toggle("active", node === button);
+            });
+            stage.querySelectorAll(".phonics-phoneme-row span").forEach((node, index) => {
+              node.classList.toggle("active", index === phonicsState.decodePartIndex);
+            });
+          }
           const text = button.dataset.phonicsSpeak || "";
           const sound = button.dataset.phonicsSound || "";
           const label = button.dataset.phonicsLabel || "";
+          const audio = button.dataset.phonicsAudio || "";
           if (phonicsState.mode === "textOnly") {
             setPhonicsStatus(`当前是只看文字模式：${text} ${sound} ${label}`.trim());
             return;
           }
+          if (audio && playPhonicsAudio(audio, `${text} ${sound}`.trim())) return;
           if (sound) {
-            setPhonicsStatus(`单音点读音频已预留：${text} ${sound}。这里不会用字母名替代字母音，避免给孩子错误示范。${label ? `示例：${label}` : ""}`);
+            setPhonicsStatus(`当前音素：${text} ${sound}。${label ? `示例：${label}` : ""}`);
             return;
           }
           if (speakPhonicsText(text, text)) return;
           setPhonicsStatus(`示范音频接口已预留：${text}。当前浏览器不能播放临时示范音，请先按提示跟读。`);
         });
       });
+      const chooseGpcOption = (option) => {
+        phonicsState.selectedAnswer = option || "";
+        phonicsState.answerChecked = false;
+        renderPhonicsPractice();
+        setPhonicsStatus(option ? `已选择 ${option}。点击 Check 检查。` : "请选择一个字素。");
+      };
       stage.querySelectorAll("[data-gpc-option]").forEach((button) => {
-        button.addEventListener("click", () => {
-          phonicsState.selectedAnswer = button.dataset.gpcOption || "";
-          renderPhonicsPractice();
-          const updatedTask = currentPhonicsTask();
-          const selected = phonicsState.selectedAnswer;
-          if (selected === updatedTask?.answer) {
-            setPhonicsStatus(`答对了：${updatedTask.word}。可以录一遍，也可以点箭头进入下一题。`);
-          } else {
-            setPhonicsStatus("还不对。先慢慢读目标词，再找缺失的声音。");
+        button.addEventListener("click", () => chooseGpcOption(button.dataset.gpcOption || ""));
+        button.addEventListener("dragstart", (event) => {
+          phonicsDraggedOption = button.dataset.gpcOption || "";
+          event.dataTransfer?.setData("text/plain", phonicsDraggedOption);
+        });
+      });
+      stage.querySelectorAll("[data-gpc-drop]").forEach((slot) => {
+        slot.addEventListener("dragover", (event) => {
+          event.preventDefault();
+          slot.classList.add("drag-over");
+        });
+        slot.addEventListener("dragleave", () => slot.classList.remove("drag-over"));
+        slot.addEventListener("drop", (event) => {
+          event.preventDefault();
+          slot.classList.remove("drag-over");
+          chooseGpcOption(event.dataTransfer?.getData("text/plain") || phonicsDraggedOption);
+          phonicsDraggedOption = "";
+        });
+      });
+      stage.querySelector("[data-gpc-check]")?.addEventListener("click", () => {
+        if (!phonicsState.selectedAnswer) {
+          setPhonicsStatus("先拖动或点选一个字素，再点 Check。");
+          return;
+        }
+        phonicsState.answerChecked = true;
+        const isCorrect = phonicsState.selectedAnswer === task?.answer;
+        renderPhonicsPractice();
+        if (isCorrect) {
+          setPhonicsStatus(`答对了：${task.word}。可以点箭头进入下一题。`);
+          if (task.audio) playPhonicsAudio(task.audio, task.word);
+        } else {
+          setPhonicsStatus("还不对。先慢慢读目标词，再找缺失的声音。");
+        }
+      });
+      stage.querySelectorAll("[data-decode-action]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          stage.querySelectorAll("[data-decode-action]").forEach((node) => node.classList.remove("active"));
+          button.classList.add("active");
+          const action = button.dataset.decodeAction;
+          const parts = task?.parts || [];
+          if (action === "sound") {
+            phonicsState.decodePartIndex = -1;
+            if (await playPhonicsAudioSequence(parts, `${task.word} 的单个声音`)) return;
+            setPhonicsStatus(`请依次点读：${parts.join(" · ")}。`);
+            return;
+          }
+          if (action === "blend") {
+            if (task?.audio && playPhonicsAudio(task.audio, `Blend ${task.word}`)) return;
+            setPhonicsStatus(`Blend：把 ${parts.join(" + ")} 慢慢滑成 ${task?.word || "这个词"}。`);
+            return;
+          }
+          if (action === "read") {
+            if (task?.audio && playPhonicsAudio(task.audio, task.word)) return;
+            speakPhonicsText(task?.word || "", task?.word || "read");
           }
         });
       });
@@ -4459,6 +4835,8 @@
       phonicsState.cardIndex = cardIndex;
       phonicsState.taskIndex = 0;
       phonicsState.selectedAnswer = "";
+      phonicsState.answerChecked = false;
+      phonicsState.decodePartIndex = -1;
       phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, cardIndex);
       phonicsState.completed = false;
       savePhonicsProgress();
@@ -4474,6 +4852,8 @@
         phonicsState.cardIndex = 0;
         phonicsState.taskIndex = 0;
         phonicsState.selectedAnswer = "";
+        phonicsState.answerChecked = false;
+        phonicsState.decodePartIndex = -1;
         phonicsState.progressCardIndex = 0;
         phonicsState.completed = false;
         savePhonicsProgress();
@@ -4485,6 +4865,8 @@
       if (phonicsState.taskIndex + 1 < phonicsTaskCount(card)) {
         phonicsState.taskIndex += 1;
         phonicsState.selectedAnswer = "";
+        phonicsState.answerChecked = false;
+        phonicsState.decodePartIndex = -1;
         savePhonicsProgress();
         renderPhonicsMap();
         renderPhonicsPractice();
@@ -4495,6 +4877,8 @@
         phonicsState.progressCardIndex = Math.max(phonicsState.progressCardIndex, phonicsState.cardIndex);
         phonicsState.taskIndex = 0;
         phonicsState.selectedAnswer = "";
+        phonicsState.answerChecked = false;
+        phonicsState.decodePartIndex = -1;
         savePhonicsProgress();
         renderPhonicsMap();
         renderPhonicsPractice();
@@ -4542,14 +4926,7 @@
         setPhonicsStatus(`单音点读音频已预留：${label}。当前先看音标和示例跟读，后续接入正式 AI 单音。`);
         return;
       }
-      resetPhonicsPlayback();
-      phonicsDemoAudio = new Audio(audio);
-      phonicsDemoAudio.playbackRate = phonicsState.speed;
-      phonicsDemoAudio.play().then(() => {
-        setPhonicsStatus("正在播放示范音频。");
-      }).catch(() => {
-        setPhonicsStatus("示范音频暂时无法播放，请先按提示跟读。");
-      });
+      playPhonicsAudio(audio, getPhonicsTaskLabel(card, task));
     }
 
     function initPhonicsPractice() {
@@ -4558,9 +4935,6 @@
       renderPhonicsLevels();
       renderPhonicsMap();
       renderPhonicsPractice();
-      document.querySelectorAll("[data-phonics-card]").forEach((button) => {
-        button.addEventListener("click", () => setPhonicsCard(Number(button.dataset.phonicsCard)));
-      });
       document.querySelectorAll("[data-open-phonics]").forEach((button) => {
         button.addEventListener("click", openPhonicsPractice);
       });
