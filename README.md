@@ -9,6 +9,7 @@
 - `public/logo.png`：网站 Logo 与路径图水印。
 - `public/wechat-qr.jpg`：JoJo 老师微信二维码。
 - `public/favicon.png`：浏览器标签页图标。
+- `public/phonics-audio/`：自然拼读练习室 AI 英音示范音频；以后可用正式 AI 音频覆盖同名文件。
 
 ## 上传 GitHub 时只上传这些内容
 
@@ -25,7 +26,11 @@ your-github-repo/
 └── public/
     ├── favicon.png
     ├── logo.png
-    └── wechat-qr.jpg
+    ├── wechat-qr.jpg
+    └── phonics-audio/
+        ├── prompt-set-01-core.mp3
+        ├── sound-s.mp3
+        └── word-sat.mp3
 ```
 
 ## 预览注意
