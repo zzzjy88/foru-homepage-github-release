@@ -4256,14 +4256,47 @@
       }
       phonicsDemoAudio = new Audio(audio);
       phonicsDemoAudio.playbackRate = phonicsState.speed;
+      let hasStarted = false;
+      let fallbackStarted = false;
+      let fallbackTimer = window.setTimeout(() => {
+        if (!hasStarted && fallbackText && !fallbackStarted) {
+          fallbackStarted = true;
+          if (phonicsDemoAudio) {
+            phonicsDemoAudio.pause();
+            phonicsDemoAudio = null;
+          }
+          speakPhonicsText(fallbackText, `${statusLabel}（临时英音）`);
+        }
+      }, 1400);
+      const clearFallbackTimer = () => {
+        window.clearTimeout(fallbackTimer);
+        fallbackTimer = null;
+      };
+      const useFallback = () => {
+        clearFallbackTimer();
+        if (fallbackStarted) return;
+        fallbackStarted = true;
+        if (fallbackText && speakPhonicsText(fallbackText, `${statusLabel}（临时英音）`)) return;
+        setPhonicsStatus(`音频文件暂时无法播放：${statusLabel}。请确认 public/phonics-audio 文件夹已经上传。`);
+      };
+      phonicsDemoAudio.addEventListener("playing", () => {
+        hasStarted = true;
+        clearFallbackTimer();
+      }, { once: true });
       phonicsDemoAudio.addEventListener("ended", () => {
+        clearFallbackTimer();
         phonicsDemoAudio = null;
       }, { once: true });
+      phonicsDemoAudio.addEventListener("error", useFallback, { once: true });
+      phonicsDemoAudio.addEventListener("stalled", () => {
+        if (!hasStarted) useFallback();
+      }, { once: true });
       phonicsDemoAudio.play().then(() => {
+        hasStarted = true;
+        clearFallbackTimer();
         setPhonicsStatus(`正在播放：${statusLabel}。`);
       }).catch(() => {
-        if (fallbackText && speakPhonicsText(fallbackText, statusLabel)) return;
-        setPhonicsStatus(`音频文件暂时无法播放：${statusLabel}。后续替换同名文件即可。`);
+        useFallback();
       });
       return true;
     }
